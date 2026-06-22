@@ -1,0 +1,27 @@
+# Ezra Kahn Portfolio Website
+
+Static personal portfolio site for mechanical engineering, robotics, lab, internship, software, and side-build project placeholders.
+
+## Structure
+
+- `index.html` - single-page portfolio content
+- `styles.css` - responsive styling and layout
+- `script.js` - project filtering and icons
+- `assets/generated/` - local PNG placeholder visuals
+- `tools/generate_assets.py` - regenerates the placeholder images
+
+## Local Preview
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+## GitHub Pages
+
+This repo is configured as a static site. In GitHub, enable Pages from the `main` branch and root directory.
+
+## Update Projects
+
+Replace the project card text and PNGs as real project photos, CAD renders, videos, writeups, and code links become available.
