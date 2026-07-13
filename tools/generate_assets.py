@@ -193,6 +193,30 @@ def project_canvas(title, subtitle, accent, name, variant):
         for x, y in [(170, 430), (745, 345), (250, 265), (505, 245), (820, 415), (105, 365)]:
             draw.ellipse((x - 15, y - 15, x + 15, y + 15), fill=accent, outline=INK, width=3)
         label(draw, "STRUCTURES", (92, 128), accent, 24)
+    elif variant == "competition":
+        rounded_rect(draw, (150, 260, 560, 430), 8, fill=WHITE, outline=INK, width=5)
+        for x in [190, 300, 410, 500]:
+            draw.ellipse((x - 30, 400, x + 30, 460), fill=(60, 68, 74), outline=INK, width=5)
+            draw.ellipse((x - 12, 418, x + 12, 442), fill=accent)
+        draw.line((560, 300, 700, 250, 800, 300), fill=INK, width=14, joint="curve")
+        draw.ellipse((782, 282, 818, 318), fill=accent, outline=INK, width=4)
+        for i, x in enumerate([185, 260, 335, 410, 485]):
+            draw.polygon([(x, 260), (x + 46, 260), (x + 23, 205)], fill=[RED, AMBER, TEAL, GREEN, RED][i])
+        draw.rectangle((600, 400, 800, 460), outline=INK, width=5)
+        draw.text((618, 415), "WORLDS", fill=INK, font=font(22, bold=True))
+        label(draw, "COMP ROBOT", (92, 128), accent, 24)
+    elif variant == "architecture":
+        rounded_rect(draw, (140, 190, 760, 460), 8, fill=WHITE, outline=INK, width=5)
+        draw.line((140, 330, 760, 330), fill=LINE, width=3)
+        draw.line((300, 190, 300, 460), fill=LINE, width=3)
+        draw.line((520, 190, 520, 460), fill=LINE, width=3)
+        draw.polygon([(140, 330), (450, 190), (760, 330)], outline=accent, width=8)
+        for x in [190, 260, 590, 660]:
+            draw.rectangle((x, 360, x + 40, 460), outline=INK, width=4)
+        draw.line((330, 460, 330, 400, 470, 400, 470, 460), fill=TEAL, width=6)
+        for x, y, w2, h2 in [(365, 230, 70, 60), (455, 230, 70, 60)]:
+            draw.rectangle((x, y, x + w2, y + h2), outline=RED, width=4)
+        label(draw, "SITE PLAN", (92, 128), accent, 24)
     elif variant == "booth":
         rounded_rect(draw, (130, 180, 760, 470), 8, fill=WHITE, outline=INK, width=5)
         draw.line((170, 470, 210, 545), fill=INK, width=10)
@@ -220,6 +244,8 @@ def main():
     project_canvas("Pressure Control", "internship", AMBER, "stem-cell-pressure-system.png", "pressure")
     project_canvas("Dogwood Systems", "automation", GREEN, "dogwood-automation.png", "software")
     project_canvas("CM Racing", "structures", RED, "racing-structures.png", "racing")
+    project_canvas("Avenues Robotics", "competition", GREEN, "avenues-robotics.png", "competition")
+    project_canvas("ACE GNY", "architecture", AMBER, "ace-gny.png", "architecture")
     project_canvas("Booth + Fun", "builds", TEAL, "booth-fun.png", "booth")
 
 

@@ -51,6 +51,10 @@ a {
   outline-offset: 3px;
 }
 
+[id] {
+  scroll-margin-top: 88px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -219,9 +223,16 @@ h1 {
   font-weight: 900;
 }
 
+.hero-credential {
+  margin: 18px 0 0;
+  color: var(--teal);
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  font-weight: 800;
+}
+
 .hero-copy {
   max-width: 640px;
-  margin: 28px 0 0;
+  margin: 16px 0 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.08rem, 2vw, 1.35rem);
 }
@@ -309,31 +320,55 @@ h1 {
   font-size: 1.02rem;
 }
 
-.filter-bar {
+.jump-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0 0 24px;
+  margin: 0 0 48px;
 }
 
-.filter-button {
+.jump-chip {
+  display: inline-flex;
+  align-items: center;
   min-height: 40px;
   padding: 0 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
   color: var(--ink-soft);
-  font: inherit;
   font-size: 0.9rem;
   font-weight: 800;
-  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
 }
 
-.filter-button:hover,
-.filter-button.is-active {
+.jump-chip:hover {
   border-color: var(--ink);
   background: var(--ink);
   color: white;
+}
+
+.work-group {
+  margin-bottom: 56px;
+}
+
+.work-group:last-child {
+  margin-bottom: 0;
+}
+
+.work-group-heading {
+  margin: 0 0 20px;
+}
+
+.work-group-heading h3 {
+  margin: 0 0 6px;
+  font-size: 1.5rem;
+}
+
+.work-group-heading p {
+  margin: 0;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .project-grid {
@@ -359,10 +394,6 @@ h1 {
   transform: translateY(-3px);
   border-color: rgba(8, 126, 139, 0.46);
   box-shadow: var(--shadow);
-}
-
-.project-card.is-hidden {
-  display: none;
 }
 
 .project-card img {
@@ -394,6 +425,22 @@ h1 {
 
 .project-card p {
   margin: 0 0 16px;
+}
+
+.project-highlight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+  color: var(--teal);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.project-highlight svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
 }
 
 .tag-list {
@@ -474,6 +521,13 @@ h1 {
 .about-copy p {
   margin: 22px 0 0;
   font-size: 1.04rem;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
 }
 
 .skill-panel {

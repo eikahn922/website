@@ -19,10 +19,10 @@
         <span>Ezra Kahn</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#links">Links</a>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
-        <a href="#about">About</a>
-        <a href="#contact">Links</a>
       </nav>
       <a class="icon-button" href="https://github.com/eikahn922" target="_blank" rel="noreferrer" aria-label="GitHub profile" title="GitHub profile">
         <i data-lucide="code-2" aria-hidden="true"></i>
@@ -36,6 +36,7 @@
         <div class="hero-content">
           <p class="eyebrow">Mechanical engineering + robotics</p>
           <h1 id="hero-title">Ezra Kahn</h1>
+          <p class="hero-credential">B.S. Mechanical Engineering · Robotics Minor · Carnegie Mellon University</p>
           <p class="hero-copy">
             CMU MechE student building wearable robotics, automation systems, and hardware prototypes from CAD through test.
           </p>
@@ -43,6 +44,10 @@
             <a class="button button-primary" href="#work">
               <i data-lucide="folder-kanban" aria-hidden="true"></i>
               <span>Projects</span>
+            </a>
+            <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
+              <i data-lucide="file-text" aria-hidden="true"></i>
+              <span>Resume</span>
             </a>
             <a class="button button-secondary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
               <i data-lucide="code-2" aria-hidden="true"></i>
@@ -53,6 +58,58 @@
               <span>Email</span>
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">I like machines that make their own constraints obvious.</h2>
+          <p>
+            I am studying mechanical engineering at Carnegie Mellon with a robotics minor, drawn to hardware that has to survive contact with the real world: wearable systems, test rigs, actuator packages, and competition robots.
+          </p>
+          <p>
+            This site keeps every major project area a clean, structured slot, ready to fill in with CAD renders, lab photos, data plots, and write-ups as that media comes together.
+          </p>
+          <div class="links-row" id="links" aria-label="Quick links">
+            <a class="button button-secondary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
+              <i data-lucide="code-2" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/ezra-i-kahn/" target="_blank" rel="noreferrer">
+              <i data-lucide="contact" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a class="button button-secondary" href="mailto:eikahn@andrew.cmu.edu">
+              <i data-lucide="mail" aria-hidden="true"></i>
+              <span>Email</span>
+            </a>
+            <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
+              <i data-lucide="file-text" aria-hidden="true"></i>
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+        <div class="skill-panel" aria-label="Technical skills">
+          <h3>Toolbox</h3>
+          <dl>
+            <div>
+              <dt>Design</dt>
+              <dd>SolidWorks, Fusion 360, assemblies, packaging, drawings</dd>
+            </div>
+            <div>
+              <dt>Build</dt>
+              <dd>3D printing, waterjet cutting, manual machining, drill press, mill, lathe</dd>
+            </div>
+            <div>
+              <dt>Code</dt>
+              <dd>Python, MATLAB, C++, Arduino</dd>
+            </div>
+            <div>
+              <dt>Systems</dt>
+              <dd>Robotics, sensors, actuation, IMUs, HRI, test rigs</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -71,7 +128,7 @@
           <article>
             <span class="metric">Build</span>
             <h2>CAD to test</h2>
-            <p>SolidWorks, Fusion 360, Arduino, Python, MATLAB, 3D printing, manual machining, and data-heavy iteration.</p>
+            <p>SolidWorks, Fusion 360, Arduino, Python, MATLAB, C++, 3D printing, waterjet cutting, and manual machining.</p>
           </article>
         </div>
       </section>
@@ -81,206 +138,228 @@
           <p class="eyebrow">Selected work</p>
           <h2 id="work-title">Project placeholders ready for real builds</h2>
           <p>
-            Each slot is structured like a short engineering case study, with space for goals, constraints, tools, outcomes, images, video, code, and test data.
+            Grouped into wearable robotics research, mechanical design and teams, software automation, and fun side builds. Each slot is structured like a short engineering case study, with space for goals, constraints, tools, outcomes, images, video, code, and test data.
           </p>
         </div>
 
-        <div class="filter-bar" role="toolbar" aria-label="Project filters">
-          <button class="filter-button is-active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="robotics">Robotics</button>
-          <button class="filter-button" type="button" data-filter="mechanical">Mechanical</button>
-          <button class="filter-button" type="button" data-filter="research">Research</button>
-          <button class="filter-button" type="button" data-filter="software">Software</button>
-          <button class="filter-button" type="button" data-filter="fun">Fun</button>
+        <nav class="jump-nav" aria-label="Jump to project group">
+          <a class="jump-chip" href="#work-research">Robotics &amp; Research</a>
+          <a class="jump-chip" href="#work-teams">Mechanical Design &amp; Teams</a>
+          <a class="jump-chip" href="#work-software">Software &amp; Automation</a>
+          <a class="jump-chip" href="#work-fun">Fun &amp; Side Builds</a>
+        </nav>
+
+        <div class="work-group" id="work-research">
+          <div class="work-group-heading">
+            <h3>Robotics &amp; Wearable Systems Research</h3>
+            <p>Lab research and personal builds focused on wearable systems, manipulators, and hardware that has to survive real testing.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="assets/generated/metamobility-exoskeleton.png" width="900" height="600" alt="Rendered placeholder for a wearable robotics exoskeleton test rig">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Research</span>
+                  <span>In progress</span>
+                </div>
+                <h3>MetaMobility Lab — Wearable Robotics</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Added a new degree of freedom with a custom prismatic-rail thigh bar</p>
+                <p>Placeholder for exoskeleton hardware work: compact electronics packaging connecting knee and hip exoskeleton platforms, a custom prismatic-rail thigh bar, and a strap attachment tuned to minimize motor motion during gait.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>Wearable robotics</li>
+                  <li>Mechanical design</li>
+                  <li>Electronics packaging</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/generated/robot-arm.png" width="900" height="600" alt="Rendered placeholder for an in-progress robotic arm assembly">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Robotics</span>
+                  <span>Personal project</span>
+                </div>
+                <h3>Adaptive Meal-Assist Robotic Arm</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Assistive feeding arm for elderly and disabled users</p>
+                <p>Placeholder for an assistive feeding manipulator: CAD assembly, degrees-of-freedom and torque study, and 3D-printed links and joints currently being fit-tested.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>CAD</li>
+                  <li>3D printing</li>
+                  <li>Assistive tech</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img src="assets/generated/stem-cell-pressure-system.png" width="900" height="600" alt="Rendered placeholder for a gas pressure control system schematic">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Internship</span>
+                  <span>NYSCF</span>
+                </div>
+                <h3>Stem Cell Storage Pressure Control</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Automated critical storage infrastructure for stem-cell samples</p>
+                <p>Placeholder for the automated gas-pressure control prototype that replaced manual regulators: SolidWorks modeling, datasheet-driven hardware selection, control logic, and digitized monitoring.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>SolidWorks</li>
+                  <li>Controls</li>
+                  <li>Prototype</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card" data-category="robotics mechanical research">
-            <img src="assets/generated/metamobility-exoskeleton.png" width="900" height="600" alt="Rendered placeholder for a wearable robotics exoskeleton test rig">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Research</span>
-                <span>In progress</span>
+        <div class="work-group" id="work-teams">
+          <div class="work-group-heading">
+            <h3>Mechanical Design &amp; Teams</h3>
+            <p>Team-based structural and mechanical design work, from competition vehicles to community-facing design collaborations.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="assets/generated/racing-structures.png" width="900" height="600" alt="Rendered placeholder for a battery enclosure and racecar structure">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Team</span>
+                  <span>CMR</span>
+                </div>
+                <h3>Carnegie Mellon Racing — Structures</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Battery enclosure design for an electric Formula SAE racecar</p>
+                <p>Placeholder for battery-enclosure modeling, packaging constraints, and electrical-integration work on the team's electric Formula SAE vehicle.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>SolidWorks</li>
+                  <li>Packaging</li>
+                  <li>Fabrication</li>
+                </ul>
               </div>
-              <h3>MetaMobility Lab - Wearable Robotics</h3>
-              <p>Placeholder for exoskeleton mechanism work, motor-efficiency test rigs, actuator selection, structural behavior, and repeatable experiments.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>Wearable robotics</li>
-                <li>Mechanical test rigs</li>
-                <li>Data collection</li>
-              </ul>
-            </div>
-          </article>
+            </article>
 
-          <article class="project-card" data-category="robotics mechanical">
-            <img src="assets/generated/robot-arm.png" width="900" height="600" alt="Rendered placeholder for an in-progress robotic arm assembly">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Robotics</span>
-                <span>Build log</span>
+            <article class="project-card">
+              <img src="assets/generated/avenues-robotics.png" width="900" height="600" alt="Rendered placeholder for a competition robotics chassis">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Team</span>
+                  <span>Subteam Lead</span>
+                </div>
+                <h3>Avenues Robotics Team</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Led mechanical design for robots that qualified for world championships</p>
+                <p>Placeholder for four years of competition-robot mechanical design, fabrication, and iteration as mechanical subteam lead, from early prototypes through world-championship qualification.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>Mechanical design</li>
+                  <li>Fabrication</li>
+                  <li>Team leadership</li>
+                </ul>
               </div>
-              <h3>In-Progress Robotic Arm</h3>
-              <p>Placeholder for manipulator design notes: degrees of freedom, torque calculations, link geometry, control stack, wiring, and end-effector tests.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>CAD</li>
-                <li>Arduino</li>
-                <li>Controls</li>
-              </ul>
-            </div>
-          </article>
+            </article>
 
-          <article class="project-card" data-category="mechanical research">
-            <img src="assets/generated/stem-cell-pressure-system.png" width="900" height="600" alt="Rendered placeholder for a gas pressure control system schematic">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Internship</span>
-                <span>NYSCF</span>
+            <article class="project-card">
+              <img src="assets/generated/ace-gny.png" width="900" height="600" alt="Rendered placeholder for an architectural site plan">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Collaboration</span>
+                  <span>ACE GNY</span>
+                </div>
+                <h3>ACE GNY — Homeless-Shelter Concept</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Group design with engineers from Skanska USA</p>
+                <p>Placeholder for a group design and CAD modeling project for a homeless-shelter concept, developed with engineers from Skanska USA through the ACE Mentor Program.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>CAD</li>
+                  <li>Collaboration</li>
+                  <li>Site design</li>
+                </ul>
               </div>
-              <h3>Stem Cell Storage Pressure Control</h3>
-              <p>Placeholder for the automated gas pressure control system replacing manual regulators, with hardware selection, control logic, and monitoring notes.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>SolidWorks</li>
-                <li>Controls</li>
-                <li>Prototype</li>
-              </ul>
-            </div>
-          </article>
+            </article>
+          </div>
+        </div>
 
-          <article class="project-card" data-category="software">
-            <img src="assets/generated/dogwood-automation.png" width="900" height="600" alt="Rendered placeholder for automation dashboards and chatbot workflows">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Software</span>
-                <span>Dogwood</span>
+        <div class="work-group" id="work-software">
+          <div class="work-group-heading">
+            <h3>Software &amp; Automation</h3>
+            <p>Python-driven tools built to remove repetitive work from real business operations.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="assets/generated/dogwood-automation.png" width="900" height="600" alt="Rendered placeholder for automation dashboards and chatbot workflows">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Software</span>
+                  <span>Dogwood</span>
+                </div>
+                <h3>Dogwood Automation Systems</h3>
+                <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Automated reporting across 60+ retail locations</p>
+                <p>Placeholder for the automation stack built at Dogwood Brands: an AI-powered HR chatbot, a Python scraper for real-time product comparison, and daily Excel reporting automated across 60+ Supercuts locations.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>Python</li>
+                  <li>Automation</li>
+                  <li>Dashboards</li>
+                </ul>
               </div>
-              <h3>Dogwood Automation Systems</h3>
-              <p>Placeholder for the HR chatbot, KPI reporting, Excel automation across retail locations, and product-comparison scraper.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>Python</li>
-                <li>Automation</li>
-                <li>Dashboards</li>
-              </ul>
-            </div>
-          </article>
+            </article>
+          </div>
+        </div>
 
-          <article class="project-card" data-category="mechanical">
-            <img src="assets/generated/racing-structures.png" width="900" height="600" alt="Rendered placeholder for a battery enclosure and racecar structure">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Team</span>
-                <span>CMR</span>
+        <div class="work-group" id="work-fun">
+          <div class="work-group-heading">
+            <h3>Fun &amp; Side Builds</h3>
+            <p>Smaller builds and experiments that don't need a full case study to be worth showing.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <img src="assets/generated/booth-fun.png" width="900" height="600" alt="Rendered placeholder for a playful booth and mechanical installation">
+              <div class="project-body">
+                <div class="project-topline">
+                  <span>Fun</span>
+                  <span>Booth</span>
+                </div>
+                <h3>Booth, Side Builds, and Odd Experiments</h3>
+                <p>Placeholder for creative builds, quick prototypes, team projects, repair stories, and anything that shows taste under constraint.</p>
+                <ul class="tag-list" aria-label="Project skills">
+                  <li>Rapid prototyping</li>
+                  <li>Team builds</li>
+                  <li>Fabrication</li>
+                </ul>
               </div>
-              <h3>Carnegie Mellon Racing Structures</h3>
-              <p>Placeholder for battery enclosure modeling, packaging constraints, electrical integration, and Formula SAE structural design work.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>SolidWorks</li>
-                <li>Packaging</li>
-                <li>Fabrication</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="fun mechanical">
-            <img src="assets/generated/booth-fun.png" width="900" height="600" alt="Rendered placeholder for a playful booth and mechanical installation">
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Fun</span>
-                <span>Booth</span>
-              </div>
-              <h3>Booth, Side Builds, and Odd Experiments</h3>
-              <p>Placeholder for creative builds, quick prototypes, team projects, repair stories, and anything that shows taste under constraint.</p>
-              <ul class="tag-list" aria-label="Project skills">
-                <li>Rapid prototyping</li>
-                <li>Team builds</li>
-                <li>Fabrication</li>
-              </ul>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section section-contrast" id="experience" aria-labelledby="experience-title">
         <div class="section-heading">
           <p class="eyebrow">Experience</p>
-          <h2 id="experience-title">Internships, labs, and teams</h2>
+          <h2 id="experience-title">Internships and labs</h2>
         </div>
         <div class="timeline">
           <article class="timeline-item">
             <time>Jan 2026 - Present</time>
             <div>
-              <h3>MetaMobility Lab - Undergraduate Mechanical Researcher</h3>
-              <p>Wearable exoskeleton research, custom dynamometer prototyping, structural analysis, actuator evaluation, and experimental setup.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <time>May 2026 - Present</time>
-            <div>
-              <h3>Varsity Tutors - Coding and Robotics Tutor</h3>
-              <p>Python and Arduino tutoring with a hands-on robotics angle.</p>
+              <h3>MetaMobility Lab — Undergraduate Mechanical Researcher</h3>
+              <p>Designing compact electronics packaging connecting knee and hip exoskeleton platforms, a custom prismatic-rail thigh bar for improved torque transfer, and a strap attachment tuned to minimize motor motion during gait.</p>
             </div>
           </article>
           <article class="timeline-item">
             <time>May 2025 - Jan 2026</time>
             <div>
-              <h3>Dogwood Brands - Software Engineering Associate</h3>
-              <p>AI chatbot prototyping, Python automation, KPI reports, data scraping, and backend workflow support.</p>
+              <h3>Dogwood Brands PE — Software Engineering Associate</h3>
+              <p>Automated daily Excel reporting across 60+ Supercuts locations, built a Python scraper for real-time product comparison, and designed an AI-powered HR chatbot for recruitment workflows.</p>
             </div>
           </article>
           <article class="timeline-item">
             <time>Jun 2023 - Aug 2023</time>
             <div>
-              <h3>New York Stem Cell Foundation - Engineering Intern</h3>
-              <p>Automated pressure-control prototype for critical storage infrastructure, including CAD, datasheet review, and control logic.</p>
+              <h3>New York Stem Cell Foundation — Engineering Intern</h3>
+              <p>Designed an automated gas-pressure control prototype to replace manual regulators for critical stem-cell storage infrastructure, from SolidWorks modeling through control logic and monitoring integration.</p>
             </div>
           </article>
-          <article class="timeline-item">
-            <time>Oct 2024 - Present</time>
-            <div>
-              <h3>Carnegie Mellon Racing - Structures and Electrical Integration</h3>
-              <p>Battery enclosure modeling and packaging work for an electric Formula SAE racecar.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="about-copy">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">I like machines that make their own constraints obvious.</h2>
-          <p>
-            I am studying mechanical engineering at Carnegie Mellon with a robotics minor, and I am especially drawn to hardware that has to survive contact with the real world: wearable systems, test rigs, actuator packages, competition robots, and automated tools that save people from repetitive work.
-          </p>
-          <p>
-            My portfolio will grow into detailed case studies as I add project media. For now, this site gives every major project area a clean slot and keeps the structure ready for CAD renders, lab photos, data plots, notebooks, GitHub links, and videos.
-          </p>
-        </div>
-        <div class="skill-panel" aria-label="Technical skills">
-          <h3>Toolbox</h3>
-          <dl>
-            <div>
-              <dt>Design</dt>
-              <dd>SolidWorks, Fusion 360, assemblies, packaging, drawings</dd>
-            </div>
-            <div>
-              <dt>Build</dt>
-              <dd>3D printing, manual machining, drill press, mill, lathe</dd>
-            </div>
-            <div>
-              <dt>Code</dt>
-              <dd>Python, MATLAB, Arduino, data processing, automation</dd>
-            </div>
-            <div>
-              <dt>Systems</dt>
-              <dd>Robotics, sensors, actuation, HRI, test rigs, reporting</dd>
-            </div>
-          </dl>
         </div>
       </section>
 
       <section class="link-band" id="contact" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Links</p>
-          <h2 id="contact-title">Build notes, code, and contact</h2>
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="contact-title">Let's build something.</h2>
+          <p>Open to research, internship, and build collaborations in robotics and mechanical design.</p>
         </div>
         <div class="link-actions">
           <a class="button button-primary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
@@ -298,6 +377,10 @@
           <a class="button button-secondary" href="mailto:eikahn@andrew.cmu.edu">
             <i data-lucide="mail" aria-hidden="true"></i>
             <span>Email</span>
+          </a>
+          <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
+            <i data-lucide="file-text" aria-hidden="true"></i>
+            <span>Resume</span>
           </a>
         </div>
       </section>

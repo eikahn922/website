@@ -4,10 +4,11 @@ Static personal portfolio site for mechanical engineering, robotics, lab, intern
 
 ## Structure
 
-- `index.html` - single-page portfolio content
+- `index.html` - single-page portfolio content, grouped into About/Links, Work (by category), Experience, and a closing contact section
 - `styles.css` - responsive styling and layout
-- `script.js` - project filtering and icons
+- `script.js` - footer year and icon rendering
 - `assets/generated/` - local PNG placeholder visuals
+- `assets/resume/` - resume PDF linked from the hero, About, and contact sections
 - `tools/generate_assets.py` - regenerates the placeholder images
 
 ## Local Preview
