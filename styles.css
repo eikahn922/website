@@ -157,8 +157,7 @@ a {
 }
 
 .section .button-secondary,
-.link-band .button-secondary,
-.about-section .button-secondary {
+.link-band .button-secondary {
   background: var(--surface);
   color: var(--ink);
   border-color: var(--line);
@@ -272,15 +271,6 @@ h1 {
   backdrop-filter: blur(12px);
 }
 
-.metric {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  color: var(--red);
-  font-size: 1.85rem;
-  font-weight: 900;
-}
-
 .skill-panel h3,
 .project-card h3 {
   margin: 12px 0 8px;
@@ -288,9 +278,7 @@ h1 {
   line-height: 1.25;
 }
 
-.section-heading p,
 .project-card p,
-.about-copy p,
 .skill-panel dd {
   color: var(--muted);
 }
@@ -301,32 +289,22 @@ h1 {
   padding: clamp(70px, 10vw, 116px) 0;
 }
 
-.section-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.65fr);
-  gap: clamp(24px, 5vw, 72px);
-  align-items: end;
-  margin-bottom: 30px;
-}
-
-.section-heading h2,
-.about-copy h2,
+.work-heading h2,
 .link-band h2 {
   margin: 0;
   font-size: clamp(2.15rem, 5vw, 4.4rem);
   line-height: 1.02;
 }
 
-.section-heading p:last-child {
-  margin: 0;
-  font-size: 1.02rem;
+.work-heading {
+  margin-bottom: clamp(30px, 6vw, 64px);
 }
 
-.work-group {
-  margin-bottom: 56px;
+.work-category {
+  margin-bottom: 58px;
 }
 
-.work-group:last-child {
+.work-category:last-child {
   margin-bottom: 0;
 }
 
@@ -336,7 +314,9 @@ h1 {
 
 .work-group-heading h3 {
   margin: 0 0 6px;
-  font-size: 1.5rem;
+  color: var(--red);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.08;
 }
 
 .work-group-heading p {
@@ -350,6 +330,14 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.project-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .project-card {
@@ -371,12 +359,21 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.project-card img {
+.project-card img,
+.project-placeholder {
   width: 100%;
-  height: auto;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   background: #d7dde3;
+}
+
+.project-placeholder {
+  background: #eef2f5;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-card-text {
+  border-top: 5px solid var(--red);
 }
 
 .project-body {
@@ -402,6 +399,18 @@ h1 {
   margin: 0 0 16px;
 }
 
+.bullet-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.bullet-list li::marker {
+  color: var(--red);
+}
+
 .project-highlight {
   display: flex;
   align-items: center;
@@ -416,44 +425,6 @@ h1 {
   width: 15px;
   height: 15px;
   flex: 0 0 auto;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: auto 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tag-list li {
-  min-height: 28px;
-  padding: 5px 9px;
-  border-radius: 6px;
-  background: #ecf5f6;
-  color: #095d66;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.about-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.52fr);
-  gap: clamp(24px, 6vw, 82px);
-  align-items: start;
-}
-
-.about-copy p {
-  margin: 22px 0 0;
-  font-size: 1.04rem;
-}
-
-.links-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
 }
 
 .skill-panel {
@@ -561,9 +532,11 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .section-heading,
-  .about-section,
   .link-band {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid-single {
     grid-template-columns: 1fr;
   }
 
@@ -632,8 +605,7 @@ h1 {
     padding: 64px 0;
   }
 
-  .section-heading h2,
-  .about-copy h2,
+  .work-heading h2,
   .link-band h2 {
     font-size: clamp(2rem, 11vw, 3rem);
   }
