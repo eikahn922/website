@@ -178,7 +178,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background: url("assets/generated/hero-robotics-lab.png") center / cover no-repeat;
+  background: url("assets/generated/gymnastics-banner.png") center 42% / cover no-repeat;
   transform: scale(1.01);
 }
 
@@ -186,7 +186,7 @@ a {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: rgba(8, 12, 15, 0.52);
+  background: linear-gradient(90deg, rgba(8, 12, 15, 0.76) 0%, rgba(8, 12, 15, 0.54) 48%, rgba(8, 12, 15, 0.32) 100%);
 }
 
 .hero-content {
@@ -662,6 +662,10 @@ h1 {
 
   .hero {
     min-height: 76svh;
+  }
+
+  .hero-media {
+    background-position: 43% center;
   }
 
   .hero-content {
