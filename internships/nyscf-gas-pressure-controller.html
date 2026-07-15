@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NYSCF gas pressure controller internship project by Ezra Kahn.">
+    <meta name="theme-color" content="#10151a">
+    <title>NYSCF Gas Pressure Controller | Ezra Kahn</title>
+    <link rel="icon" href="../assets/generated/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="../index.html#top" aria-label="Ezra Kahn home">
+        <span class="brand-mark">EK</span>
+        <span>Ezra Kahn</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <a class="icon-button" href="https://github.com/eikahn922" target="_blank" rel="noreferrer" aria-label="GitHub profile" title="GitHub profile">
+        <i data-lucide="code-2" aria-hidden="true"></i>
+      </a>
+    </header>
+
+    <main class="case-main">
+      <a class="case-back" href="../index.html#work-internships">
+        <i data-lucide="arrow-left" aria-hidden="true"></i>
+        <span>Back to internships</span>
+      </a>
+
+      <section class="case-hero" aria-labelledby="case-title">
+        <div>
+          <p class="eyebrow">Internship / NYSCF</p>
+          <h1 id="case-title">Gas Pressure Controller</h1>
+          <p class="case-lead">Automated gas-pressure control prototype for monitoring and regulating CO2, O2, and N2 flow in the NYSCF array gas pressure controller workflow.</p>
+        </div>
+        <img class="case-hero-image" src="../assets/generated/nyscf-gas-controller-title.png" width="452" height="380" alt="Prototype gas pressure controller sensor housing">
+      </section>
+
+      <section class="case-card" aria-labelledby="overview-title">
+        <div class="project-topline">
+          <span>Overview</span>
+          <span>Poster + code</span>
+        </div>
+        <h2 class="case-section-title" id="overview-title">Project Notes</h2>
+        <p>Extended description coming soon. This page is set up for the full project writeup, including the sensor housing, gas sensing circuit, proportional valve control, and Arduino control code.</p>
+        <ul class="bullet-list">
+          <li>Digitized a manual gas pressure controller concept for CO2 and O2 monitoring.</li>
+          <li>Used Arduino-style I2C, analog sensing, and PWM output control architecture.</li>
+          <li>Created a code repository for pressure sensing, gas concentration monitoring, and proportional valve regulation.</li>
+        </ul>
+      </section>
+
+      <section class="case-card" aria-labelledby="poster-title">
+        <h2 class="case-section-title" id="poster-title">Poster</h2>
+        <img class="case-poster" src="../assets/generated/nyscf-gas-pressure-poster.jpg" width="1184" height="1892" alt="NYSCF gas pressure controller project poster">
+      </section>
+
+      <section class="case-card" aria-labelledby="code-title">
+        <div class="project-topline">
+          <span>Repository</span>
+          <span>Arduino</span>
+        </div>
+        <h2 class="case-section-title" id="code-title">Control Code</h2>
+        <p>The reconstructed Arduino code reads gas pressure, monitors CO2 and O2, drives proportional valve outputs, and includes safety cutoff behavior.</p>
+        <a class="case-action" href="https://github.com/eikahn922/NYSCF-Gas-Pressure-Regulator-Code-" target="_blank" rel="noreferrer">
+          <i data-lucide="external-link" aria-hidden="true"></i>
+          <span>Open Code Repository</span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

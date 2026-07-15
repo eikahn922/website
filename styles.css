@@ -396,6 +396,14 @@ h1 {
   box-shadow: var(--shadow);
 }
 
+.project-card-link {
+  color: inherit;
+}
+
+.project-card-link:hover h3 {
+  color: var(--red);
+}
+
 .project-card img,
 .project-placeholder {
   width: 100%;
@@ -406,6 +414,11 @@ h1 {
 
 .project-card img.project-logo {
   padding: 22px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.project-card img.project-contain {
   object-fit: contain;
   background: #ffffff;
 }
@@ -668,6 +681,20 @@ h1 {
   max-height: 440px;
 }
 
+.case-logo-image {
+  padding: 28px;
+  background: #ffffff;
+}
+
+.case-poster {
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
 .case-card {
   margin-top: 16px;
   padding: clamp(16px, 2vw, 24px);
@@ -697,6 +724,25 @@ h1 {
 
 .case-gallery img {
   max-height: 560px;
+}
+
+.case-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 40px;
+  padding: 0 14px;
+  color: white;
+  background: var(--ink);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.case-action svg {
+  width: 17px;
+  height: 17px;
 }
 
 .link-actions {
