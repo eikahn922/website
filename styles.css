@@ -281,7 +281,6 @@ h1 {
   font-weight: 900;
 }
 
-.timeline h3,
 .skill-panel h3,
 .project-card h3 {
   margin: 12px 0 8px;
@@ -291,7 +290,6 @@ h1 {
 
 .section-heading p,
 .project-card p,
-.timeline p,
 .about-copy p,
 .skill-panel dd {
   color: var(--muted);
@@ -437,55 +435,6 @@ h1 {
   color: #095d66;
   font-size: 0.78rem;
   font-weight: 800;
-}
-
-.section-contrast {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding-left: max(18px, calc((100vw - var(--max)) / 2));
-  padding-right: max(18px, calc((100vw - var(--max)) / 2));
-  background: #11161b;
-  color: white;
-}
-
-.section-contrast .eyebrow {
-  color: var(--amber);
-}
-
-.section-contrast .section-heading p,
-.section-contrast .timeline p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.timeline {
-  display: grid;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: clamp(18px, 4vw, 42px);
-  padding: 22px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.timeline-item time {
-  color: var(--amber);
-  font-size: 0.9rem;
-  font-weight: 900;
-}
-
-.timeline h3 {
-  color: white;
-  font-size: 1.15rem;
-}
-
-.timeline p {
-  max-width: 780px;
-  margin: 0;
 }
 
 .about-section {
@@ -683,21 +632,10 @@ h1 {
     padding: 64px 0;
   }
 
-  .section.section-contrast {
-    width: 100%;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
   .section-heading h2,
   .about-copy h2,
   .link-band h2 {
     font-size: clamp(2rem, 11vw, 3rem);
-  }
-
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 8px;
   }
 
   .skill-panel {
