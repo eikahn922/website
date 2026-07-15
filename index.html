@@ -100,8 +100,7 @@
             <h3>Research</h3>
           </div>
           <div class="project-grid project-grid-single">
-            <article class="project-card">
-              <img src="assets/generated/metamobility-exoskeleton.png" width="900" height="600" alt="Rendered placeholder for a wearable robotics exoskeleton test rig">
+            <article class="project-card research-card">
               <div class="project-body">
                 <div class="project-topline">
                   <span>Research</span>
@@ -109,11 +108,60 @@
                 </div>
                 <h3>MetaMobility Lab - Undergraduate Mechanical Researcher</h3>
                 <p class="project-highlight"><i data-lucide="sparkles" aria-hidden="true"></i>Wearable robotics research and mechanical design</p>
-                <ul class="bullet-list">
-                  <li>Designing compact electronics packaging connecting knee and hip exoskeleton platforms.</li>
-                  <li>Developing a custom prismatic-rail thigh bar for improved torque transfer.</li>
-                  <li>Iterating strap attachment geometry to minimize motor motion during gait.</li>
-                </ul>
+                <div class="research-accordion" aria-label="Research project details">
+                  <details class="research-detail">
+                    <summary>
+                      <span>Tester</span>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <div class="research-detail-body">
+                      <p>Mechanical test setup for validating fit, clearance, and behavior before the hardware is integrated onto the exoskeleton system.</p>
+                      <ul class="bullet-list">
+                        <li>Built around quick iteration so hardware changes can be checked before full assembly.</li>
+                        <li>Supports practical checks on alignment, mounting, and repeatable attachment.</li>
+                        <li>Gives the research workflow a controlled bridge between CAD and human-subject hardware.</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details class="research-detail">
+                    <summary>
+                      <span>Thigh Bar</span>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <div class="research-detail-body">
+                      <p>Custom thigh-bar assembly designed to add a more adjustable mechanical interface between the knee and hip exoskeleton platforms.</p>
+                      <div class="research-gallery">
+                        <img src="assets/generated/research-thighbar-front.png" width="1062" height="1326" alt="Front CAD view of the thigh bar assembly">
+                        <img src="assets/generated/research-thighbar-back.png" width="852" height="1306" alt="Back CAD view of the thigh bar assembly">
+                      </div>
+                      <ul class="bullet-list">
+                        <li>Uses a prismatic-rail concept for improved torque transfer and adjustability.</li>
+                        <li>Provides a cleaner mechanical path between wearable attachment points.</li>
+                        <li>Designed for iteration around fit, stiffness, and user comfort constraints.</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details class="research-detail">
+                    <summary>
+                      <span>Distributed Computing Physical Architecture</span>
+                      <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </summary>
+                    <div class="research-detail-body">
+                      <p>Compact electronics packaging that distributes sensor and compute hardware across the wearable system while keeping wiring serviceable.</p>
+                      <div class="research-gallery">
+                        <img src="assets/generated/research-computing-wiring.png" width="682" height="598" alt="Open electronics package showing wiring and embedded boards">
+                        <img src="assets/generated/research-computing-housing.png" width="764" height="486" alt="Hinged electronics housing with boards mounted inside">
+                      </div>
+                      <ul class="bullet-list">
+                        <li>Packages embedded boards and wiring into compact printed housings.</li>
+                        <li>Keeps connectors accessible while protecting electronics during testing.</li>
+                        <li>Separates physical compute nodes so the wearable system can stay modular.</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
               </div>
             </article>
           </div>
