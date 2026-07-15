@@ -272,28 +272,6 @@ h1 {
   backdrop-filter: blur(12px);
 }
 
-.signal-band {
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
-}
-
-.signal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: min(var(--max), calc(100% - 36px));
-  margin: 0 auto;
-}
-
-.signal-grid article {
-  min-height: 190px;
-  padding: clamp(24px, 4vw, 42px) clamp(8px, 2vw, 28px);
-  border-right: 1px solid var(--line);
-}
-
-.signal-grid article:first-child {
-  border-left: 1px solid var(--line);
-}
-
 .metric {
   display: inline-flex;
   align-items: center;
@@ -303,7 +281,6 @@ h1 {
   font-weight: 900;
 }
 
-.signal-grid h2,
 .timeline h3,
 .skill-panel h3,
 .project-card h3 {
@@ -312,7 +289,6 @@ h1 {
   line-height: 1.25;
 }
 
-.signal-grid p,
 .section-heading p,
 .project-card p,
 .timeline p,
@@ -346,33 +322,6 @@ h1 {
 .section-heading p:last-child {
   margin: 0;
   font-size: 1.02rem;
-}
-
-.jump-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 48px;
-}
-
-.jump-chip {
-  display: inline-flex;
-  align-items: center;
-  min-height: 40px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--ink-soft);
-  font-size: 0.9rem;
-  font-weight: 800;
-  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
-}
-
-.jump-chip:hover {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: white;
 }
 
 .work-group {
@@ -659,14 +608,8 @@ h1 {
     max-width: 520px;
   }
 
-  .signal-grid,
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .signal-grid article:nth-child(3) {
-    grid-column: 1 / -1;
-    border-top: 1px solid var(--line);
   }
 
   .section-heading,
@@ -731,16 +674,8 @@ h1 {
     width: 100%;
   }
 
-  .signal-grid,
   .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .signal-grid article,
-  .signal-grid article:first-child {
-    border-left: 0;
-    border-right: 0;
-    border-top: 1px solid var(--line);
   }
 
   .section {
