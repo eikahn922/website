@@ -11,7 +11,7 @@
   --green: #2f7d59;
   --shadow: 0 18px 42px rgba(16, 21, 26, 0.14);
   --radius: 8px;
-  --max: 1180px;
+  --max: 1360px;
 }
 
 * {
@@ -289,7 +289,13 @@ h1 {
   padding: clamp(70px, 10vw, 116px) 0;
 }
 
-.work-heading h2,
+.work-heading h2 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  font-weight: 900;
+}
+
 .link-band h2 {
   margin: 0;
   font-size: clamp(2.15rem, 5vw, 4.4rem);
@@ -297,11 +303,11 @@ h1 {
 }
 
 .work-heading {
-  margin-bottom: clamp(30px, 6vw, 64px);
+  margin-bottom: clamp(28px, 5vw, 56px);
 }
 
 .work-category {
-  margin-bottom: 58px;
+  margin-bottom: clamp(48px, 7vw, 82px);
 }
 
 .work-category:last-child {
@@ -314,9 +320,20 @@ h1 {
 
 .work-group-heading h3 {
   margin: 0 0 6px;
-  color: var(--red);
-  font-size: clamp(1.6rem, 3vw, 2.35rem);
   line-height: 1.08;
+}
+
+.work-subheading h3 {
+  color: var(--red);
+  font-size: clamp(1.55rem, 2.7vw, 2.45rem);
+  font-weight: 900;
+}
+
+.work-major-heading h3 {
+  color: var(--ink);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  font-weight: 900;
 }
 
 .work-group-heading p {
@@ -329,7 +346,7 @@ h1 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 22px;
 }
 
 .project-grid-single {
@@ -338,6 +355,11 @@ h1 {
 
 .project-grid-two {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-grid-single .project-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.38fr) minmax(0, 1fr);
 }
 
 .project-card {
@@ -367,6 +389,13 @@ h1 {
   background: #d7dde3;
 }
 
+.project-grid-single .project-card img,
+.project-grid-single .project-placeholder {
+  height: 100%;
+  min-height: 290px;
+  aspect-ratio: auto;
+}
+
 .project-placeholder {
   background: #eef2f5;
   border-bottom: 1px solid var(--line);
@@ -380,7 +409,7 @@ h1 {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 18px;
+  padding: clamp(20px, 2.5vw, 34px);
 }
 
 .project-topline {
@@ -540,6 +569,17 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .project-grid-single .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-grid-single .project-card img,
+  .project-grid-single .project-placeholder {
+    height: auto;
+    min-height: 240px;
+    aspect-ratio: 3 / 2;
+  }
+
   .link-actions {
     justify-content: flex-start;
   }
@@ -605,7 +645,14 @@ h1 {
     padding: 64px 0;
   }
 
-  .work-heading h2,
+  .work-heading h2 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .work-major-heading h3 {
+    font-size: clamp(2.7rem, 14vw, 4.8rem);
+  }
+
   .link-band h2 {
     font-size: clamp(2rem, 11vw, 3rem);
   }
