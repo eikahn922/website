@@ -30,87 +30,64 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="hero" id="about" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true"></div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
-          <p class="eyebrow">Mechanical engineering + robotics</p>
-          <h1 id="hero-title">Ezra Kahn</h1>
-          <p class="hero-statement">I like machines that make their own constraints obvious.</p>
-          <p class="hero-credential">B.S. Mechanical Engineering · Robotics Minor · Carnegie Mellon University</p>
-          <p class="hero-copy">
-            Born with Pierre Robin sequence, a craniofacial difference, I know firsthand how life-saving surgery and thoughtful design can change a life. Engineering is how I want to turn that urgency into actionable change.
-          </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="button button-primary" href="#work">
-              <i data-lucide="folder-kanban" aria-hidden="true"></i>
-              <span>Projects</span>
-            </a>
-            <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
-              <i data-lucide="file-text" aria-hidden="true"></i>
-              <span>Resume</span>
-            </a>
-            <a class="button button-secondary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
-              <i data-lucide="code-2" aria-hidden="true"></i>
-              <span>GitHub</span>
-            </a>
-            <a class="button button-secondary" href="mailto:eikahn@andrew.cmu.edu">
-              <i data-lucide="mail" aria-hidden="true"></i>
-              <span>Email</span>
-            </a>
+          <div class="hero-layout">
+            <div class="hero-intro">
+              <p class="eyebrow">Mechanical engineering + robotics</p>
+              <h1 id="hero-title">Ezra Kahn</h1>
+              <p class="hero-statement">I like machines that make their own constraints obvious.</p>
+              <p class="hero-credential">B.S. Mechanical Engineering · Robotics Minor · Carnegie Mellon University</p>
+              <p class="hero-copy">
+                Born with Pierre Robin sequence, a craniofacial difference, I know firsthand how life-saving surgery and thoughtful design can change a life. Engineering is how I want to turn that urgency into actionable change.
+              </p>
+              <div class="hero-actions" id="links" aria-label="Primary links">
+                <a class="button button-primary" href="#work">
+                  <i data-lucide="folder-kanban" aria-hidden="true"></i>
+                  <span>Projects</span>
+                </a>
+                <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
+                  <i data-lucide="file-text" aria-hidden="true"></i>
+                  <span>Resume</span>
+                </a>
+                <a class="button button-secondary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
+                  <i data-lucide="code-2" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+                <a class="button button-secondary" href="https://www.linkedin.com/in/ezra-i-kahn/" target="_blank" rel="noreferrer">
+                  <i data-lucide="contact" aria-hidden="true"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a class="button button-secondary" href="mailto:eikahn@andrew.cmu.edu">
+                  <i data-lucide="mail" aria-hidden="true"></i>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+            <aside class="skill-panel hero-toolbox" aria-label="Technical skills">
+              <h3>Toolbox</h3>
+              <dl>
+                <div>
+                  <dt>Design</dt>
+                  <dd>SolidWorks, Fusion 360, assemblies, packaging, drawings</dd>
+                </div>
+                <div>
+                  <dt>Build</dt>
+                  <dd>3D printing, waterjet cutting, manual machining, drill press, mill, lathe</dd>
+                </div>
+                <div>
+                  <dt>Code</dt>
+                  <dd>Python, MATLAB, C++, Arduino</dd>
+                </div>
+                <div>
+                  <dt>Systems</dt>
+                  <dd>Robotics, sensors, actuation, IMUs, HRI, test rigs</dd>
+                </div>
+              </dl>
+            </aside>
           </div>
-        </div>
-      </section>
-
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="about-copy">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">I like machines that make their own constraints obvious.</h2>
-          <p>
-            I was born with Pierre Robin sequence, a craniofacial difference, and without life-saving surgeries I would not be here. That experience made me care about work that has a real effect on people's bodies, independence, and daily lives.
-          </p>
-          <p>
-            I am studying mechanical engineering at Carnegie Mellon with a robotics minor because engineering is a way to make actionable change: to take constraints seriously, build around them, test the result, and improve it. I am drawn to hardware that has to survive contact with the real world: wearable systems, test rigs, actuator packages, medical-adjacent devices, and competition robots.
-          </p>
-          <div class="links-row" id="links" aria-label="Quick links">
-            <a class="button button-secondary" href="https://github.com/eikahn922" target="_blank" rel="noreferrer">
-              <i data-lucide="code-2" aria-hidden="true"></i>
-              <span>GitHub</span>
-            </a>
-            <a class="button button-secondary" href="https://www.linkedin.com/in/ezra-i-kahn/" target="_blank" rel="noreferrer">
-              <i data-lucide="contact" aria-hidden="true"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a class="button button-secondary" href="mailto:eikahn@andrew.cmu.edu">
-              <i data-lucide="mail" aria-hidden="true"></i>
-              <span>Email</span>
-            </a>
-            <a class="button button-secondary" href="assets/resume/EzraKahn-Resume.pdf" target="_blank" rel="noreferrer">
-              <i data-lucide="file-text" aria-hidden="true"></i>
-              <span>Resume</span>
-            </a>
-          </div>
-        </div>
-        <div class="skill-panel" aria-label="Technical skills">
-          <h3>Toolbox</h3>
-          <dl>
-            <div>
-              <dt>Design</dt>
-              <dd>SolidWorks, Fusion 360, assemblies, packaging, drawings</dd>
-            </div>
-            <div>
-              <dt>Build</dt>
-              <dd>3D printing, waterjet cutting, manual machining, drill press, mill, lathe</dd>
-            </div>
-            <div>
-              <dt>Code</dt>
-              <dd>Python, MATLAB, C++, Arduino</dd>
-            </div>
-            <div>
-              <dt>Systems</dt>
-              <dd>Robotics, sensors, actuation, IMUs, HRI, test rigs</dd>
-            </div>
-          </dl>
         </div>
       </section>
 

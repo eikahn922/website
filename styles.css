@@ -196,6 +196,17 @@ a {
   color: white;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+
+.hero-intro {
+  min-width: 0;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--teal);
@@ -251,6 +262,14 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 32px;
+}
+
+.hero-toolbox {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
 }
 
 .signal-band {
@@ -629,6 +648,15 @@ h1 {
 
   .hero {
     min-height: min(680px, 78svh);
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero-toolbox {
+    max-width: 520px;
   }
 
   .signal-grid,
