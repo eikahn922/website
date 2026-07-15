@@ -404,6 +404,12 @@ h1 {
   background: #d7dde3;
 }
 
+.project-card img.project-logo {
+  padding: 22px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
 .project-grid-single .project-card img,
 .project-grid-single .project-placeholder {
   height: 100%;
