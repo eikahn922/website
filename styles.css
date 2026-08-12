@@ -297,6 +297,32 @@ h1 {
   margin: 0 auto;
 }
 
+.activity-image-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(800px, 100%);
+  margin: 0 auto;
+}
+
+.activity-image-grid .project-card {
+  grid-template-rows: 52% 48%;
+  aspect-ratio: 1.35;
+}
+
+.activity-image-grid .project-body {
+  padding: 12px 15px 13px;
+}
+
+.activity-image-grid h3 {
+  margin: 5px 0 4px;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+.activity-image-grid p {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
 .project-grid-featured .project-card-featured {
   grid-column: 1 / -1;
   width: min(800px, 100%);
@@ -828,6 +854,10 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
     grid-template-columns: minmax(0, 520px);
   }
 
+  .activity-image-grid {
+    grid-template-columns: minmax(0, 520px);
+  }
+
   .project-grid-featured .project-card-featured {
     grid-column: auto;
     grid-template-rows: 65% 35%;
@@ -836,6 +866,11 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
   .project-card,
   .project-grid-featured .project-card:not(.project-card-featured) {
+    grid-template-rows: 50% 50%;
+    aspect-ratio: 0.92;
+  }
+
+  .activity-image-grid .project-card {
     grid-template-rows: 50% 50%;
     aspect-ratio: 0.92;
   }
