@@ -121,7 +121,7 @@ a {
 .hero-content {
   width: min(980px, calc(100% - 36px));
   margin: 0 auto;
-  padding: clamp(38px, 5.5vw, 64px) 0;
+  padding: clamp(13px, 1.8vw, 22px) 0 clamp(38px, 5.5vw, 64px);
   color: var(--ink);
 }
 
@@ -788,7 +788,7 @@ h1 {
 @media (max-width: 700px) {
   .hero-content {
     width: min(100% - 28px, var(--max));
-    padding: 34px 0 44px;
+    padding: 11px 0 44px;
   }
 
   .hero-layout {
