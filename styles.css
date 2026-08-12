@@ -440,6 +440,41 @@ h1 {
   background: #d7dde3;
 }
 
+.project-collage {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  min-height: 0;
+  overflow: hidden;
+  background: #d7dde3;
+}
+
+.project-collage img {
+  min-width: 0;
+  object-position: center;
+}
+
+.project-collage img:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+.project-collage img:nth-child(2) {
+  grid-column: 3 / 5;
+}
+
+.project-collage img:nth-child(3) {
+  grid-column: 5 / 7;
+}
+
+.project-collage img:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.project-collage img:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
 .project-card img.project-logo {
   padding: 28px;
   object-fit: contain;
