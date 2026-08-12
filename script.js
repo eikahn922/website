@@ -27,11 +27,23 @@ if (sectionDots && workSection && projectGroups.length) {
 
   const updateSectionDots = () => {
     const marker = window.innerHeight * 0.5;
-    const workBounds = workSection.getBoundingClientRect();
-    const isVisible = workBounds.top < window.innerHeight * 0.72 && workBounds.bottom > window.innerHeight * 0.28;
+    const firstCardBounds = projectGroups[0].cards[0].getBoundingClientRect();
+    const lastGroup = projectGroups[projectGroups.length - 1];
+    const lastCardBounds = lastGroup.cards[lastGroup.cards.length - 1].getBoundingClientRect();
+    const isVisible = firstCardBounds.top <= marker && lastCardBounds.bottom >= marker;
 
     sectionDots.classList.toggle("is-visible", isVisible);
     document.body.classList.toggle("project-focus-enabled", isVisible);
+
+    if (!isVisible) {
+      projectGroups.forEach((group) => {
+        group.link.classList.remove("is-active");
+        group.link.removeAttribute("aria-current");
+        group.cards.forEach((card) => card.classList.remove("is-scroll-active"));
+      });
+      scheduled = false;
+      return;
+    }
 
     const activeGroup = projectGroups.reduce((closest, group) => {
       const groupCenter = group.cards.reduce((total, card) => {
