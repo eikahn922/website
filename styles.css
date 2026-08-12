@@ -255,6 +255,11 @@ h1 {
 .work-group-heading {
   margin: 0 auto 20px;
   text-align: center;
+  transition: transform 320ms ease;
+}
+
+.work-category.is-scroll-active-section > .work-group-heading {
+  transform: translateY(-12px);
 }
 
 .work-group-heading h3 {

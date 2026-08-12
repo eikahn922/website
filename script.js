@@ -14,6 +14,7 @@ const sectionDots = document.querySelector(".section-dots");
 const dotLinks = Array.from(document.querySelectorAll(".section-dot"));
 const workSection = document.querySelector("#work");
 const projectCards = Array.from(document.querySelectorAll("[data-scroll-project]"));
+const workCategories = Array.from(document.querySelectorAll(".work-category"));
 const projectGroups = dotLinks
   .map((link) => ({
     name: link.dataset.project,
@@ -36,6 +37,7 @@ if (sectionDots && workSection && projectGroups.length) {
     document.body.classList.toggle("project-focus-enabled", isVisible);
 
     if (!isVisible) {
+      workCategories.forEach((category) => category.classList.remove("is-scroll-active-section"));
       projectGroups.forEach((group) => {
         group.link.classList.remove("is-active");
         group.link.removeAttribute("aria-current");
@@ -54,6 +56,9 @@ if (sectionDots && workSection && projectGroups.length) {
 
       return distance < closest.distance ? { group, distance } : closest;
     }, { group: projectGroups[0], distance: Number.POSITIVE_INFINITY }).group;
+
+    workCategories.forEach((category) => category.classList.remove("is-scroll-active-section"));
+    activeGroup.cards[0].closest(".work-category")?.classList.add("is-scroll-active-section");
 
     projectGroups.forEach((group) => {
       const isActive = group === activeGroup;
