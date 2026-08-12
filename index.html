@@ -11,7 +11,7 @@
     <link rel="preload" href="assets/generated/ezra-kahn-portrait.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="script.js?v=2" defer></script>
+    <script src="script.js?v=3" defer></script>
   </head>
   <body>
     <main id="top">
@@ -48,7 +48,7 @@
             <p>MetaMobility Lab · Undergraduate Mechanical Researcher · Jan 2026 - Present</p>
           </div>
           <div class="project-grid project-grid-featured">
-            <a class="project-card project-card-link project-card-featured" href="research/distributed-computing.html" aria-label="Open Distributed Computing Physical Architecture project page">
+            <a class="project-card project-card-link project-card-featured" id="project-distributed" data-scroll-project="distributed" href="research/distributed-computing.html" aria-label="Open Distributed Computing Physical Architecture project page">
               <div class="project-collage" aria-label="Distributed computing packaging shown across CAD and physical prototypes">
                 <img src="assets/projects/distributed-computing/pelvis-package-cad.png" width="1458" height="1262" alt="CAD view of the distributed computing package integrated with the pelvis assembly">
                 <img src="assets/projects/distributed-computing/imu-mount-cad.png" width="1456" height="1396" alt="CAD view of the adjustable IMU package mounted on the exoskeleton frame">
@@ -67,7 +67,7 @@
               </div>
             </a>
 
-            <a class="project-card project-card-link" href="research/thigh-bar.html" aria-label="Open Thigh Bar project page">
+            <a class="project-card project-card-link" id="project-thigh-bar" data-scroll-project="research-secondary" href="research/thigh-bar.html" aria-label="Open Thigh Bar project page">
               <img src="assets/generated/research-thighbar-front.png" width="1062" height="1326" alt="Front CAD view of the thigh bar assembly">
               <div class="project-body">
                 <div class="project-topline">
@@ -80,7 +80,7 @@
               </div>
             </a>
 
-            <a class="project-card project-card-link" href="research/tester.html" aria-label="Open Tester project page">
+            <a class="project-card project-card-link" data-scroll-project="research-secondary" href="research/tester.html" aria-label="Open Tester project page">
               <img src="assets/generated/metamobility-exoskeleton.png" width="900" height="600" alt="Wearable robotics test setup">
               <div class="project-body">
                 <div class="project-topline">
@@ -100,7 +100,7 @@
             <h3>Internships</h3>
           </div>
           <div class="project-grid">
-            <a class="project-card project-card-link" href="internships/dogwood-brands.html" aria-label="Open Dogwood Brands project page">
+            <a class="project-card project-card-link" id="project-dogwood" data-scroll-project="dogwood" href="internships/dogwood-brands.html" aria-label="Open Dogwood Brands project page">
               <img class="project-logo" src="assets/generated/dogwood-brands-logo.png" width="250" height="204" alt="Dogwood Brands Company logo">
               <div class="project-body">
                 <div class="project-topline">
@@ -113,7 +113,7 @@
               </div>
             </a>
 
-            <a class="project-card project-card-link" href="internships/nyscf-gas-pressure-controller.html" aria-label="Open New York Stem Cell Foundation gas pressure controller project page">
+            <a class="project-card project-card-link" id="project-nyscf" data-scroll-project="nyscf" href="internships/nyscf-gas-pressure-controller.html" aria-label="Open New York Stem Cell Foundation gas pressure controller project page">
               <img class="project-contain" src="assets/generated/nyscf-gas-controller-title.png" width="452" height="380" alt="Prototype gas pressure controller sensor housing">
               <div class="project-body">
                 <div class="project-topline">
@@ -133,7 +133,7 @@
             <h3>Personal Robotics</h3>
           </div>
           <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card" id="project-meal-assist" data-scroll-project="meal-assist">
               <img src="assets/generated/robot-arm.png" width="900" height="600" alt="Adaptive meal-assist robotic arm concept">
               <div class="project-body">
                 <div class="project-topline">
@@ -187,7 +187,7 @@
             <h3>Building for Fun</h3>
           </div>
           <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card" id="project-building" data-scroll-project="building">
               <img src="assets/generated/booth-fun.png" width="900" height="600" alt="Booth and collaborative building projects graphic">
               <div class="project-body">
                 <div class="project-topline">
@@ -233,12 +233,13 @@
       </section>
     </main>
 
-    <nav class="section-dots" aria-label="Selected work sections">
-      <a class="section-dot" href="#work-research" data-section="work-research" aria-label="Research"><span>Research</span></a>
-      <a class="section-dot" href="#work-internships" data-section="work-internships" aria-label="Internships"><span>Internships</span></a>
-      <a class="section-dot" href="#work-personal" data-section="work-personal" aria-label="Personal Robotics"><span>Personal Robotics</span></a>
-      <a class="section-dot" href="#work-activities" data-section="work-activities" aria-label="Academic Activities"><span>Academic Activities</span></a>
-      <a class="section-dot" href="#work-building" data-section="work-building" aria-label="Building for Fun"><span>Building for Fun</span></a>
+    <nav class="section-dots" aria-label="Visual projects">
+      <a class="section-dot" href="#project-distributed" data-project="distributed" aria-label="Distributed Computing Physical Architecture"></a>
+      <a class="section-dot" href="#project-thigh-bar" data-project="research-secondary" aria-label="Thigh Bar and Tester"></a>
+      <a class="section-dot" href="#project-dogwood" data-project="dogwood" aria-label="Dogwood Brands"></a>
+      <a class="section-dot" href="#project-nyscf" data-project="nyscf" aria-label="New York Stem Cell Foundation"></a>
+      <a class="section-dot" href="#project-meal-assist" data-project="meal-assist" aria-label="Adaptive Meal-Assist Robotic Arm"></a>
+      <a class="section-dot" href="#project-building" data-project="building" aria-label="Building for Fun"></a>
     </nav>
 
     <footer class="site-footer">
