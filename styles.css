@@ -304,16 +304,16 @@ h1 {
 }
 
 .activity-image-grid .project-card {
-  grid-template-rows: 52% 48%;
+  grid-template-rows: 48% 52%;
   aspect-ratio: 1.35;
 }
 
 .activity-image-grid .project-body {
-  padding: 12px 15px 13px;
+  padding: 9px 15px 8px;
 }
 
 .activity-image-grid h3 {
-  margin: 5px 0 4px;
+  margin: 3px 0 2px;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
 }
 
@@ -321,6 +321,11 @@ h1 {
   font-family: inherit;
   font-size: 0.88rem;
   line-height: 1.4;
+}
+
+.activity-image-grid .project-cta {
+  margin-top: 5px;
+  font-size: 0.7rem;
 }
 
 .project-grid-featured .project-card-featured {
