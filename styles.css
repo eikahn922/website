@@ -52,59 +52,7 @@ a {
 }
 
 [id] {
-  scroll-margin-top: 88px;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 18px;
-  min-height: 60px;
-  padding: 8px clamp(16px, 3.5vw, 44px);
-  background: var(--paper);
-  border-bottom: 1px solid rgba(16, 21, 26, 0.1);
-}
-
-.brand-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  font-size: 0.92rem;
-  font-weight: 800;
-  white-space: nowrap;
-}
-
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 7px;
-  background: var(--ink);
-  color: white;
-  font-size: 0.76rem;
-}
-
-.site-nav {
-  display: flex;
-  justify-content: center;
-  gap: clamp(12px, 3vw, 34px);
-  min-width: 0;
-}
-
-.site-nav a {
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-.site-nav a:hover {
-  color: var(--teal);
+  scroll-margin-top: 18px;
 }
 
 .icon-button,
@@ -165,7 +113,7 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  min-height: 520px;
+  min-height: 0;
   background: var(--paper);
   border-bottom: 1px solid rgba(16, 21, 26, 0.1);
 }
@@ -173,7 +121,7 @@ a {
 .hero-content {
   width: min(980px, calc(100% - 36px));
   margin: 0 auto;
-  padding: clamp(64px, 9vw, 108px) 0;
+  padding: clamp(38px, 5.5vw, 64px) 0;
   color: var(--ink);
 }
 
@@ -345,7 +293,7 @@ h1 {
 
 .project-grid-featured {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(900px, 100%);
+  width: min(800px, 100%);
   margin: 0 auto;
 }
 
@@ -353,6 +301,8 @@ h1 {
   grid-column: 1 / -1;
   width: min(800px, 100%);
   justify-self: center;
+  grid-template-rows: 50% 50%;
+  aspect-ratio: 1.72;
 }
 
 .project-card {
@@ -747,25 +697,9 @@ h1 {
 }
 
 @media (max-width: 700px) {
-  .site-header {
-    gap: 10px;
-    min-height: 60px;
-    padding: 10px 14px;
-  }
-
-  .site-nav a {
-    font-size: 0.88rem;
-  }
-
-  .brand-link span:last-child {
-    max-width: 34vw;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   .hero-content {
     width: min(100% - 28px, var(--max));
-    padding: 52px 0 58px;
+    padding: 34px 0 44px;
   }
 
   .hero-layout {
@@ -811,6 +745,8 @@ h1 {
 
   .project-grid-featured .project-card-featured {
     grid-column: auto;
+    grid-template-rows: 46% 54%;
+    aspect-ratio: 0.92;
   }
 
   .project-card,
