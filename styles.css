@@ -291,20 +291,20 @@ h1 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: minmax(0, 800px);
+  grid-template-columns: minmax(0, 760px);
   justify-content: center;
   gap: clamp(18px, 2.5vw, 26px);
 }
 
 .project-grid-featured {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(800px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
 }
 
 .activity-image-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  width: min(800px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
 }
 
@@ -335,7 +335,7 @@ h1 {
 
 .project-grid-featured .project-card-featured {
   grid-column: 1 / -1;
-  width: min(800px, 100%);
+  width: min(760px, 100%);
   justify-self: center;
   grid-template-rows: 74% 26%;
   aspect-ratio: 1.38;
@@ -361,7 +361,7 @@ h1 {
 }
 
 .activity-grid {
-  grid-template-columns: minmax(0, 800px);
+  grid-template-columns: minmax(0, 760px);
 }
 
 .activity-card {
@@ -874,16 +874,16 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   }
 
   .project-grid {
-    grid-template-columns: minmax(0, 520px);
+    grid-template-columns: minmax(0, 480px);
     justify-content: center;
   }
 
   .project-grid-featured {
-    grid-template-columns: minmax(0, 520px);
+    grid-template-columns: minmax(0, 480px);
   }
 
   .activity-image-grid {
-    grid-template-columns: minmax(0, 520px);
+    grid-template-columns: minmax(0, 480px);
   }
 
   .project-grid-featured .project-card-featured {
@@ -904,7 +904,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   }
 
   .activity-grid {
-    grid-template-columns: minmax(0, 520px);
+    grid-template-columns: minmax(0, 480px);
   }
 
   .activity-card {
