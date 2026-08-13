@@ -107,6 +107,10 @@ if (
   lightboxPrevious &&
   lightboxNext
 ) {
+  const hasMultipleGalleryImages = expandableGalleryImages.length > 1;
+  lightboxPrevious.hidden = !hasMultipleGalleryImages;
+  lightboxNext.hidden = !hasMultipleGalleryImages;
+
   let currentLightboxIndex = 0;
   let lightboxReturnFocus = null;
 

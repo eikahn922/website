@@ -483,7 +483,9 @@ h1 {
 }
 
 .project-card img.nyscf-cover-image {
-  object-position: center 43%;
+  object-fit: contain;
+  object-position: center;
+  background: #eef1f4;
 }
 
 .project-body {
