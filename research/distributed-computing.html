@@ -14,29 +14,32 @@
   </head>
   <body>
     <main class="case-main">
-      <a class="case-back" href="../index.html#work-research"><i data-lucide="arrow-left" aria-hidden="true"></i><span>Back to research</span></a>
-      <section class="package-study" aria-labelledby="packaging-title">
-        <p class="package-column-heading package-description-heading">Project Description</p>
+      <div class="package-page-topline">
+        <a class="case-back" href="../index.html#work-research"><i data-lucide="arrow-left" aria-hidden="true"></i><span>Back to research</span></a>
         <p class="package-column-heading package-photos-heading">Photos <span>(click to expand)</span></p>
-        <div class="case-copy package-copy">
-          <section class="case-section">
-            <div class="project-topline"><span>Research hardware</span><span>Fully validated</span></div>
-            <h2 class="case-section-title" id="packaging-title">Electronics Packaging</h2>
-            <p>I designed and fabricated the hardware enclosure for a distributed exoskeleton communications node, keeping the electronics close to the sensor to reduce long cable runs.</p>
-            <h3 class="case-subtitle">Packaging requirements</h3>
-            <ul class="bullet-list">
-              <li>Lightweight and quick to 3D print.</li>
-              <li>Shield status LEDs from infrared motion-capture cameras while preserving debug access.</li>
-              <li>Keep connectors accessible, route cable loads into the housing, and secure each board without loading surface-mounted components.</li>
-            </ul>
-          </section>
-          <section class="case-section package-evolution" aria-labelledby="evolution-title">
-            <h3 class="case-subtitle" id="evolution-title">Why it changed</h3>
-            <p>The QT Py and IMU version reduces package size while preserving the same function, connector access, LED shielding, and strain relief.</p>
-          </section>
-          <section class="case-section imu-placement-summary" aria-labelledby="imu-mounting-title">
-            <h2 class="case-section-title" id="imu-mounting-title">Adjustable IMU Mounts for the Hip-Knee Exoskeleton</h2>
-            <p>An IMU measures motion in its own coordinate frame. If its starting position or orientation changes between participants, the gait data includes variation from setup rather than movement. These mounts aim to place each sensor at a comparable relative location and initial orientation across body sizes. More consistent inputs may improve cross-participant model transfer, but that benefit still needs to be measured.</p>
+      </div>
+      <section class="package-study" aria-labelledby="packaging-title">
+        <div class="package-description-column">
+          <p class="package-column-heading package-description-heading">Project Description</p>
+          <div class="case-copy package-copy">
+            <section class="case-section">
+              <div class="project-topline"><span>Research hardware</span><span>Fully validated</span></div>
+              <h2 class="case-section-title" id="packaging-title">Electronics Packaging</h2>
+              <p>I designed and fabricated the hardware enclosure for a distributed exoskeleton communications node, keeping the electronics close to the sensor to reduce long cable runs.</p>
+              <h3 class="case-subtitle">Packaging requirements</h3>
+              <ul class="bullet-list">
+                <li>Lightweight and quick to 3D print.</li>
+                <li>Shield status LEDs from infrared motion-capture cameras while preserving debug access.</li>
+                <li>Keep connectors accessible, route cable loads into the housing, and secure each board without loading surface-mounted components.</li>
+              </ul>
+            </section>
+            <section class="case-section package-evolution" aria-labelledby="evolution-title">
+              <h3 class="case-subtitle" id="evolution-title">Why it changed</h3>
+              <p>The QT Py and IMU version reduces package size while preserving the same function, connector access, LED shielding, and strain relief.</p>
+            </section>
+            <section class="case-section imu-placement-summary" aria-labelledby="imu-mounting-title">
+              <h2 class="case-section-title" id="imu-mounting-title">Adjustable IMU Mounts for the Hip-Knee Exoskeleton</h2>
+              <p>An IMU measures motion in its own coordinate frame. If its starting position or orientation changes between participants, the gait data includes variation from setup rather than movement. These mounts aim to place each sensor at a comparable relative location and initial orientation across body sizes. More consistent inputs may improve cross-participant model transfer, but that benefit still needs to be measured.</p>
 
             <h3 class="case-subtitle">Shin</h3>
             <p>The shin mount adjusts along the leg and side to side around the cuff. A strap secures the cuff through the knee-exoskeleton attachment, while a foam interface increases friction to limit movement during gait. The design is still being developed and tested for fit, slip, and placement repeatability.</p>
@@ -46,8 +49,8 @@
 
             <h3 class="case-subtitle">Pelvis</h3>
             <p>The completed adjustable pelvis mount translates along the back-plate structure and locks the IMU relative to the exoskeleton. A static version remains as a comparison baseline. Testing will determine whether the added adjustment improves placement repeatability enough to justify the extra mechanism.</p>
-          </section>
-          <section class="case-section skills-section" aria-labelledby="skills-title">
+            </section>
+            <section class="case-section skills-section" aria-labelledby="skills-title">
             <h2 class="case-section-title" id="skills-title">Skills</h2>
             <div class="skill-group">
               <h3 class="case-subtitle">Technical</h3>
@@ -66,15 +69,16 @@
                 <span>Experimental Planning</span>
               </div>
             </div>
-          </section>
-          <section class="case-section project-source" aria-labelledby="project-source-title">
+            </section>
+            <section class="case-section project-source" aria-labelledby="project-source-title">
             <h2 class="case-section-title" id="project-source-title">Explore the Full Project</h2>
             <p>Access the complete CAD structure, design history, specifications, and validation notes on GitHub.</p>
             <a class="github-project-link" href="https://github.com/eikahn922/exoskeleton_SensorPlacementProject">
               <span>View the project on GitHub</span>
               <i data-lucide="arrow-up-right" aria-hidden="true"></i>
             </a>
-          </section>
+            </section>
+          </div>
         </div>
         <aside class="case-media package-media" aria-label="Electronics packaging images">
           <section class="package-version" aria-labelledby="teensy-media-title">

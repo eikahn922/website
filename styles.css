@@ -685,9 +685,9 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .case-main {
-  width: min(1240px, calc(100% - 48px));
+  width: min(1320px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(44px, 7vw, 84px) 0;
+  padding: clamp(30px, 4vw, 48px) 0;
 }
 
 .case-back {
@@ -708,16 +708,24 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   align-items: start;
 }
 
+.package-page-topline {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  column-gap: clamp(22px, 3vw, 44px);
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.package-page-topline .case-back {
+  margin-bottom: 0;
+}
+
 .package-study {
   display: grid;
-  grid-template-columns: minmax(0, 0.7fr) minmax(340px, 0.78fr);
-  grid-template-areas:
-    "description-heading photos-heading"
-    "description photos";
-  column-gap: clamp(30px, 5vw, 66px);
-  row-gap: 12px;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  column-gap: clamp(22px, 3vw, 44px);
   align-items: start;
-  padding: 4px 0 clamp(38px, 6vw, 68px);
+  padding: 0 0 10px;
 }
 
 .package-column-heading {
@@ -730,11 +738,11 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .package-description-heading {
-  grid-area: description-heading;
+  margin-bottom: 8px;
 }
 
 .package-photos-heading {
-  grid-area: photos-heading;
+  justify-self: start;
 }
 
 .package-photos-heading span {
@@ -745,9 +753,12 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .package-copy {
-  grid-area: description;
   position: static;
   top: auto;
+}
+
+.package-description-column {
+  min-width: 0;
 }
 
 .package-evolution {
@@ -755,7 +766,17 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .package-copy > .case-section:first-child {
-  padding-bottom: 8px;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-bottom: 0;
+}
+
+.package-copy > .case-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.package-copy > .case-section {
   border-bottom: 0;
 }
 
@@ -765,11 +786,10 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .case-media {
   display: grid;
-  gap: clamp(18px, 2.5vw, 28px);
+  gap: clamp(8px, 1vw, 12px);
 }
 
 .package-media {
-  grid-area: photos;
   grid-template-columns: 1fr;
 }
 
@@ -802,13 +822,13 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
 }
 
 .package-version + .package-version {
-  padding-top: clamp(24px, 4vw, 38px);
-  border-top: 1px solid rgba(16, 21, 26, 0.16);
+  padding-top: 6px;
+  border-top: 0;
 }
 
 .package-version-title {
@@ -874,7 +894,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .subsystem-gallery {
-  gap: 14px;
+  gap: 10px;
 }
 
 .shin-gallery,
@@ -1054,7 +1074,7 @@ body.lightbox-open {
 }
 
 .case-section {
-  padding: 18px 0 22px;
+  padding: 8px 0 10px;
   border-bottom: 1px solid rgba(16, 21, 26, 0.15);
 }
 
@@ -1064,21 +1084,21 @@ body.lightbox-open {
 }
 
 .package-study .case-section p {
-  margin-bottom: 10px;
-  font-size: 0.94rem;
-  line-height: 1.42;
+  margin-bottom: 8px;
+  font-size: 0.98rem;
+  line-height: 1.44;
 }
 
 .package-study .case-subtitle {
-  margin: 18px 0 6px;
+  margin: 11px 0 5px;
   font-size: 0.82rem;
 }
 
 .package-study .bullet-list {
   gap: 3px;
   padding-left: 22px;
-  font-size: 0.92rem;
-  line-height: 1.38;
+  font-size: 0.95rem;
+  line-height: 1.42;
 }
 
 .skills-section .case-subtitle {
@@ -1086,7 +1106,7 @@ body.lightbox-open {
 }
 
 .skill-group + .skill-group {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .github-project-link {
@@ -1208,12 +1228,13 @@ body.lightbox-open {
   }
 
   .package-study {
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 0.78fr);
-    grid-template-areas:
-      "description-heading photos-heading"
-      "description photos";
-    column-gap: clamp(12px, 3vw, 30px);
-    row-gap: 12px;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    column-gap: clamp(12px, 3vw, 24px);
+  }
+
+  .package-page-topline {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    column-gap: clamp(12px, 3vw, 24px);
   }
 
   .package-copy {
@@ -1244,6 +1265,10 @@ body.lightbox-open {
 
 @media (max-width: 700px) {
   .package-study {
+    column-gap: 10px;
+  }
+
+  .package-page-topline {
     column-gap: 10px;
   }
 
@@ -1368,7 +1393,7 @@ body.lightbox-open {
 
   .case-main {
     width: min(100% - 28px, var(--max));
-    padding: 36px 0;
+    padding: 24px 0;
   }
 
   .work-heading h2 {
