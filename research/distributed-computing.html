@@ -30,11 +30,11 @@
 
     <main class="case-main">
       <a class="case-back" href="../index.html#work-research"><i data-lucide="arrow-left" aria-hidden="true"></i><span>Back to research</span></a>
-      <section class="package-study" aria-labelledby="teensy-title">
-        <div class="case-copy">
-          <section class="case-section" aria-labelledby="teensy-title">
-            <div class="project-topline"><span>Original architecture</span><span>Fully validated</span></div>
-            <h2 class="case-section-title" id="teensy-title">Teensy + IMU + CAN Packaging</h2>
+      <section class="package-study" aria-labelledby="packaging-title">
+        <div class="case-copy package-copy">
+          <section class="case-section">
+            <div class="project-topline"><span>Research hardware</span><span>Fully validated</span></div>
+            <h2 class="case-section-title" id="packaging-title">Electronics Packaging</h2>
             <p>I designed and fabricated the hardware enclosure for a distributed exoskeleton communications node, keeping the electronics close to the sensor to reduce long cable runs.</p>
             <h3 class="case-subtitle">Packaging requirements</h3>
             <ul class="bullet-list">
@@ -44,37 +44,34 @@
               <li>Constrain the Teensy, IMU, and CAN Pal without loading surface-mounted components.</li>
             </ul>
           </section>
-        </div>
-        <aside class="case-media package-media" aria-label="Teensy, IMU, and CAN package images">
-          <div class="case-media-group">
-            <h3 class="case-media-label">CAD</h3>
-            <figure><img src="../assets/projects/distributed-computing/teensy-imu-can-cad.png" width="1266" height="946" alt="CAD of the Teensy, IMU, and CAN Pal enclosure with the lid open"><figcaption>Teensy × IMU × CAN Pal</figcaption></figure>
-          </div>
-          <div class="case-media-group">
-            <h3 class="case-media-label">Fabricated</h3>
-            <figure><img src="../assets/projects/distributed-computing/prototype-wiring.jpg" width="965" height="1067" alt="Fabricated Teensy, IMU, and CAN enclosure with wiring visible"><figcaption>Internal electronics and wiring</figcaption></figure>
-          </div>
-        </aside>
-      </section>
-
-      <section class="package-study" aria-labelledby="qtpy-title">
-        <div class="case-copy">
-          <section class="case-section">
-            <div class="project-topline"><span>Compact architecture</span><span>Fully validated</span></div>
-            <h2 class="case-section-title" id="qtpy-title">IMU + QT Py Packaging</h2>
-            <p>I replaced the larger Teensy/CAN arrangement with exactly one QT Py and one IMU. The smaller controller reduced enclosure volume while retaining the same connector access, strain relief, LED shielding, printability, and service requirements.</p>
-            <p>This compact package became the implemented architecture for the adjustable IMU mounting system.</p>
+          <section class="case-section package-evolution" aria-labelledby="evolution-title">
+            <h3 class="case-subtitle" id="evolution-title">Why it changed</h3>
+            <p>I replaced the larger Teensy/CAN arrangement with exactly one QT Py and one IMU. The smaller controller reduced enclosure volume while retaining connector access, strain relief, LED shielding, printability, and serviceability.</p>
           </section>
         </div>
-        <aside class="case-media package-media" aria-label="QT Py and IMU package images">
-          <div class="case-media-group">
-            <h3 class="case-media-label">CAD</h3>
-            <figure><img src="../assets/projects/distributed-computing/qtpy-imu-cad.png" width="1814" height="1014" alt="CAD of the compact QT Py and IMU electronics enclosure with the lid open"><figcaption>QT Py × IMU</figcaption></figure>
-          </div>
-          <div class="case-media-group">
-            <h3 class="case-media-label">Fabricated</h3>
-            <figure><img src="../assets/projects/distributed-computing/prototype-enclosure.jpg" width="1098" height="699" alt="Fabricated compact QT Py and IMU enclosure with the hinged lid open"><figcaption>Compact printed enclosure</figcaption></figure>
-          </div>
+        <aside class="case-media package-media" aria-label="Electronics packaging images">
+          <section class="package-version" aria-labelledby="teensy-media-title">
+            <h3 class="package-version-title" id="teensy-media-title">Teensy × IMU × CAN Pal</h3>
+            <div class="case-media-group">
+              <h4 class="case-media-label">CAD</h4>
+              <figure><img src="../assets/projects/distributed-computing/teensy-imu-can-cad.png" width="1266" height="946" alt="CAD of the Teensy, IMU, and CAN Pal enclosure with the lid open"></figure>
+            </div>
+            <div class="case-media-group">
+              <h4 class="case-media-label">Fabricated</h4>
+              <figure><img class="package-photo-portrait" src="../assets/projects/distributed-computing/prototype-wiring.jpg" width="965" height="1067" alt="Fabricated Teensy, IMU, and CAN enclosure with wiring visible"></figure>
+            </div>
+          </section>
+          <section class="package-version" aria-labelledby="qtpy-media-title">
+            <h3 class="package-version-title" id="qtpy-media-title">QT Py × IMU</h3>
+            <div class="case-media-group">
+              <h4 class="case-media-label">CAD</h4>
+              <figure><img src="../assets/projects/distributed-computing/qtpy-imu-cad.png" width="1814" height="1014" alt="CAD of the compact QT Py and IMU electronics enclosure with the lid open"></figure>
+            </div>
+            <div class="case-media-group">
+              <h4 class="case-media-label">Fabricated</h4>
+              <figure><img src="../assets/projects/distributed-computing/prototype-enclosure.jpg" width="1098" height="699" alt="Fabricated compact QT Py and IMU enclosure with the hinged lid open"></figure>
+            </div>
+          </section>
         </aside>
       </section>
     </main>
