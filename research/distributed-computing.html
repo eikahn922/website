@@ -30,24 +30,53 @@
 
     <main class="case-main">
       <a class="case-back" href="../index.html#work-research"><i data-lucide="arrow-left" aria-hidden="true"></i><span>Back to research</span></a>
-      <div class="case-layout">
+      <section class="package-study" aria-labelledby="teensy-title">
         <div class="case-copy">
-          <section class="case-section" aria-labelledby="overview-title">
-            <div class="project-topline"><span>Overview</span><span>Description draft</span></div>
-            <h2 class="case-section-title" id="overview-title">Project Notes</h2>
-            <p>Longer description coming soon. This page is set up for a fuller writeup on packaging, wiring, serviceability, and distributed compute decisions.</p>
+          <section class="case-section" aria-labelledby="teensy-title">
+            <div class="project-topline"><span>Original architecture</span><span>Fully validated</span></div>
+            <h2 class="case-section-title" id="teensy-title">Teensy + IMU + CAN Packaging</h2>
+            <p>I designed and fabricated the hardware enclosure for a distributed exoskeleton communications node, keeping the electronics close to the sensor to reduce long cable runs.</p>
+            <h3 class="case-subtitle">Packaging requirements</h3>
             <ul class="bullet-list">
-              <li>Packages embedded boards and wiring into compact printed housings.</li>
-              <li>Keeps connectors accessible while protecting electronics during testing.</li>
-              <li>Separates physical compute nodes so the wearable system can stay modular.</li>
+              <li>Lightweight and quick to 3D print.</li>
+              <li>Shield status LEDs from infrared motion-capture cameras while preserving debug access.</li>
+              <li>Keep plugs accessible and transfer cable loads into the housing—not the board connectors.</li>
+              <li>Constrain the Teensy, IMU, and CAN Pal without loading surface-mounted components.</li>
             </ul>
           </section>
         </div>
-        <aside class="case-media" aria-label="Project images">
-          <img src="../assets/generated/research-computing-wiring.png" width="682" height="598" alt="Open electronics package showing wiring and embedded boards">
-          <img src="../assets/generated/research-computing-housing.png" width="764" height="486" alt="Hinged electronics housing with boards mounted inside">
+        <aside class="case-media package-media" aria-label="Teensy, IMU, and CAN package images">
+          <div class="case-media-group">
+            <h3 class="case-media-label">CAD</h3>
+            <figure><img src="../assets/projects/distributed-computing/teensy-imu-can-cad.png" width="1266" height="946" alt="CAD of the Teensy, IMU, and CAN Pal enclosure with the lid open"><figcaption>Teensy × IMU × CAN Pal</figcaption></figure>
+          </div>
+          <div class="case-media-group">
+            <h3 class="case-media-label">Fabricated</h3>
+            <figure><img src="../assets/projects/distributed-computing/prototype-wiring.jpg" width="965" height="1067" alt="Fabricated Teensy, IMU, and CAN enclosure with wiring visible"><figcaption>Internal electronics and wiring</figcaption></figure>
+          </div>
         </aside>
-      </div>
+      </section>
+
+      <section class="package-study" aria-labelledby="qtpy-title">
+        <div class="case-copy">
+          <section class="case-section">
+            <div class="project-topline"><span>Compact architecture</span><span>Fully validated</span></div>
+            <h2 class="case-section-title" id="qtpy-title">IMU + QT Py Packaging</h2>
+            <p>I replaced the larger Teensy/CAN arrangement with exactly one QT Py and one IMU. The smaller controller reduced enclosure volume while retaining the same connector access, strain relief, LED shielding, printability, and service requirements.</p>
+            <p>This compact package became the implemented architecture for the adjustable IMU mounting system.</p>
+          </section>
+        </div>
+        <aside class="case-media package-media" aria-label="QT Py and IMU package images">
+          <div class="case-media-group">
+            <h3 class="case-media-label">CAD</h3>
+            <figure><img src="../assets/projects/distributed-computing/qtpy-imu-cad.png" width="1814" height="1014" alt="CAD of the compact QT Py and IMU electronics enclosure with the lid open"><figcaption>QT Py × IMU</figcaption></figure>
+          </div>
+          <div class="case-media-group">
+            <h3 class="case-media-label">Fabricated</h3>
+            <figure><img src="../assets/projects/distributed-computing/prototype-enclosure.jpg" width="1098" height="699" alt="Fabricated compact QT Py and IMU enclosure with the hinged lid open"><figcaption>Compact printed enclosure</figcaption></figure>
+          </div>
+        </aside>
+      </section>
     </main>
   </body>
 </html>
