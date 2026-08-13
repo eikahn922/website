@@ -337,7 +337,7 @@ h1 {
   grid-column: 1 / -1;
   width: min(760px, 100%);
   justify-self: center;
-  grid-template-rows: 74% 26%;
+  grid-template-rows: 66% 34%;
   aspect-ratio: 1.38;
 }
 
@@ -490,7 +490,7 @@ h1 {
 }
 
 .project-card-featured .project-body {
-  padding: 14px 20px 15px;
+  padding: 14px 20px 20px;
 }
 
 .project-grid-featured .project-card-featured h3 {
@@ -504,7 +504,8 @@ h1 {
 }
 
 .project-card-featured .project-cta {
-  margin-top: 8px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
 .project-skill-chips,
@@ -515,7 +516,8 @@ h1 {
 }
 
 .project-skill-chips {
-  margin-top: 10px;
+  justify-content: flex-end;
+  margin: 0;
 }
 
 .project-skill-chips span,
@@ -527,6 +529,16 @@ h1 {
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1;
+}
+
+.project-topline .project-skill-chips {
+  flex: 1 1 auto;
+}
+
+.project-topline .project-skill-chips span {
+  padding: 4px 7px;
+  font-size: 0.58rem;
+  text-transform: none;
 }
 
 .project-grid-featured .project-card:not(.project-card-featured) .project-body {
@@ -726,8 +738,8 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .package-copy {
   grid-area: description;
-  position: sticky;
-  top: 24px;
+  position: static;
+  top: auto;
 }
 
 .package-evolution {
