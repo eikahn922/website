@@ -825,41 +825,52 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .subsystem-gallery img {
-  width: auto;
-  max-width: 100%;
-  max-height: 190px;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
 }
 
-.subsystem-gallery-single .case-media-group,
-.thigh-gallery .thigh-overview,
-.pelvis-gallery .pelvis-overview,
-.pelvis-gallery .pelvis-static-view {
-  grid-column: 1 / -1;
+.subsystem-gallery {
+  gap: 14px;
 }
 
-.thigh-gallery .thigh-overview img,
-.pelvis-gallery .pelvis-overview img,
-.pelvis-gallery .pelvis-static-view img {
-  max-height: 175px;
+.thigh-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pelvis-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .subsystem-gallery .case-media-group {
+  grid-column: auto;
+  grid-template-rows: minmax(2.4em, auto) auto;
   align-content: start;
-  justify-items: start;
+  min-width: 0;
 }
 
-.subsystem-gallery-single .case-media-group,
-.thigh-gallery .thigh-overview,
-.pelvis-gallery .pelvis-overview,
-.pelvis-gallery .pelvis-static-view {
-  justify-items: center;
+.subsystem-gallery .case-media-label {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.7rem;
+  line-height: 1.25;
 }
 
-.subsystem-gallery-single .case-media-label,
-.thigh-gallery .thigh-overview .case-media-label,
-.pelvis-gallery .pelvis-overview .case-media-label,
-.pelvis-gallery .pelvis-static-view .case-media-label {
-  justify-self: start;
+.subsystem-gallery figure {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #eef1f4;
+}
+
+.subsystem-gallery-single .case-media-group {
+  grid-column: 1 / -1;
+  width: min(220px, 62%);
+  justify-self: center;
 }
 
 .case-logo-image {
