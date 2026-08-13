@@ -482,6 +482,10 @@ h1 {
   background: #ffffff;
 }
 
+.project-card img.nyscf-cover-image {
+  object-position: center 43%;
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
@@ -896,6 +900,40 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .package-media .package-photo-portrait {
   max-height: none;
+}
+
+.nyscf-media {
+  gap: 12px;
+}
+
+.nyscf-media figure {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  overflow: hidden;
+  background: #eef1f4;
+}
+
+.nyscf-media figure img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.nyscf-media .case-media-group + .case-media-group {
+  margin-top: 4px;
+}
+
+.nyscf-copy .case-section {
+  border-bottom: 0;
+}
+
+.confidentiality-note {
+  margin-top: 10px !important;
+  font-size: 0.82rem !important;
+  font-style: italic;
 }
 
 .package-version:not(.subsystem-gallery) figure {

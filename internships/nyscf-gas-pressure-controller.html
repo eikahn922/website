@@ -3,71 +3,121 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="NYSCF gas pressure controller internship project by Ezra Kahn.">
+    <meta name="description" content="NYSCF gas pressure controller internship project by Ezra Kahn, covering sensor integration, closed-loop control, embedded programming, and prototype development.">
     <meta name="theme-color" content="#10151a">
     <title>NYSCF Gas Pressure Controller | Ezra Kahn</title>
     <link rel="icon" href="../assets/generated/ezra-kahn-favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/generated/ezra-kahn-favicon.png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=7">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-    <script src="../script.js" defer></script>
+    <script src="../script.js?v=4" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand-link" href="../index.html#top" aria-label="Ezra Kahn home">
-        <span class="brand-mark">EK</span>
-        <span>Ezra Kahn</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#contact">Contact</a>
-      </nav>
-      <a class="icon-button" href="https://github.com/eikahn922" target="_blank" rel="noreferrer" aria-label="GitHub profile" title="GitHub profile">
-        <i data-lucide="code-2" aria-hidden="true"></i>
-      </a>
-    </header>
-
     <main class="case-main">
-      <a class="case-back" href="../index.html#work-internships">
-        <i data-lucide="arrow-left" aria-hidden="true"></i>
-        <span>Back to internships</span>
-      </a>
-
-      <div class="case-layout">
-        <div class="case-copy">
-      <section class="case-section" aria-labelledby="overview-title">
-        <div class="project-topline">
-          <span>Overview</span>
-          <span>Poster + code</span>
-        </div>
-        <h2 class="case-section-title" id="overview-title">Project Notes</h2>
-        <p>Extended description coming soon. This page is set up for the full project writeup, including the sensor housing, gas sensing circuit, proportional valve control, and Arduino control code.</p>
-        <ul class="bullet-list">
-          <li>Digitized a manual gas pressure controller concept for CO2 and O2 monitoring.</li>
-          <li>Used Arduino-style I2C, analog sensing, and PWM output control architecture.</li>
-          <li>Created a code repository for pressure sensing, gas concentration monitoring, and proportional valve regulation.</li>
-        </ul>
-      </section>
-
-      <section class="case-section" aria-labelledby="code-title">
-        <div class="project-topline">
-          <span>Repository</span>
-          <span>Arduino</span>
-        </div>
-        <h2 class="case-section-title" id="code-title">Control Code</h2>
-        <p>The reconstructed Arduino code reads gas pressure, monitors CO2 and O2, drives proportional valve outputs, and includes safety cutoff behavior.</p>
-        <a class="case-action" href="https://github.com/eikahn922/NYSCF-Gas-Pressure-Regulator-Code-" target="_blank" rel="noreferrer">
-          <i data-lucide="external-link" aria-hidden="true"></i>
-          <span>Open Code Repository</span>
+      <div class="package-page-topline">
+        <a class="case-back" href="../index.html#work-internships">
+          <i data-lucide="arrow-left" aria-hidden="true"></i>
+          <span>Back to internships</span>
         </a>
-      </section>
+        <div class="package-column-heading package-photos-heading">
+          <span class="package-photos-title">Photos</span>
+          <button class="gallery-open-button" type="button">Open gallery</button>
+          <span class="gallery-open-instruction">or click any photo to expand</span>
         </div>
-        <aside class="case-media" aria-label="Project images">
-          <img src="../assets/generated/nyscf-gas-controller-title.png" width="452" height="380" alt="Prototype gas pressure controller sensor housing">
-          <img class="case-poster" src="../assets/generated/nyscf-gas-pressure-poster.jpg" width="1184" height="1892" alt="NYSCF gas pressure controller project poster">
-        </aside>
       </div>
+
+      <section class="package-study nyscf-study" aria-labelledby="nyscf-project-title">
+        <div class="package-description-column">
+          <p class="package-column-heading package-description-heading">Project Description</p>
+          <div class="case-copy package-copy nyscf-copy">
+            <section class="case-section">
+              <div class="project-topline"><span>Engineering internship</span><span>Jun - Aug 2023</span></div>
+              <h1 class="case-section-title" id="nyscf-project-title">Digitizing the NYSCF Array Gas Pressure Controllers</h1>
+              <p>I developed a prototype architecture for replacing manual gas-pressure adjustment with continuous electronic sensing and closed-loop control. The system was designed to regulate pressure while maintaining controlled oxygen and carbon-dioxide concentrations for the NYSCF Array.</p>
+            </section>
+
+            <section class="case-section" aria-labelledby="system-title">
+              <h2 class="case-section-title" id="system-title">System Architecture</h2>
+              <ul class="bullet-list">
+                <li>Integrated pressure, CO₂, and O₂ sensing through analog inputs and I²C communication.</li>
+                <li>Mapped controller outputs to three proportional valves for CO₂, O₂, and N₂ flow.</li>
+                <li>Designed a compact CAD housing to position and protect the gas-sensing hardware.</li>
+              </ul>
+            </section>
+
+            <section class="case-section" aria-labelledby="controls-title">
+              <h2 class="case-section-title" id="controls-title">Control Approach</h2>
+              <p>The public prototype firmware runs a PID pressure loop with separate PI corrections for CO₂ and O₂. Remaining flow demand is assigned to nitrogen, and all valves close when sensor data fails, becomes stale, or pressure exceeds the safety limit.</p>
+            </section>
+
+            <section class="case-section skills-section" aria-labelledby="nyscf-skills-title">
+              <h2 class="case-section-title" id="nyscf-skills-title">Skills</h2>
+              <div class="skill-group">
+                <h3 class="case-subtitle">Technical</h3>
+                <div class="skill-chips" aria-label="Technical skills">
+                  <span>Embedded C++</span>
+                  <span>PID and PI Control</span>
+                  <span>Sensor Integration</span>
+                  <span>CAD Prototyping</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h3 class="case-subtitle">Professional</h3>
+                <div class="skill-chips" aria-label="Professional skills">
+                  <span>Cross-Functional Collaboration</span>
+                  <span>Requirements Translation</span>
+                  <span>Technical Communication</span>
+                  <span>Safety-Conscious Engineering</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="case-section project-source" aria-labelledby="nyscf-code-title">
+              <h2 class="case-section-title" id="nyscf-code-title">Public Control Algorithm</h2>
+              <p>The public repository contains the prototype Arduino control code, documented signal path, calibration variables, telemetry format, and bench safeguards.</p>
+              <a class="github-project-link" href="https://github.com/eikahn922/NYSCF-Gas-Pressure-Regulator-Code-" target="_blank" rel="noreferrer">
+                <span>View the control algorithm on GitHub</span>
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <p class="confidentiality-note">All other project files and implementation details are confidential.</p>
+            </section>
+          </div>
+        </div>
+
+        <aside class="case-media package-media expandable-media nyscf-media" aria-label="NYSCF project photos">
+          <div class="case-media-group">
+            <h2 class="case-media-label">Poster Presentation</h2>
+            <figure>
+              <img src="../assets/projects/nyscf/nyscf-poster-presentation.jpg" width="2400" height="1800" alt="Ezra Kahn presenting the NYSCF gas pressure controller project beside the technical poster">
+            </figure>
+          </div>
+          <div class="case-media-group">
+            <h2 class="case-media-label">Technical Poster</h2>
+            <figure>
+              <img src="../assets/generated/nyscf-gas-pressure-poster.jpg" width="1184" height="1892" alt="Technical poster describing the NYSCF gas pressure controller project architecture">
+            </figure>
+          </div>
+        </aside>
+      </section>
     </main>
+
+    <div class="image-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+      <button class="lightbox-control lightbox-close" type="button" aria-label="Close expanded image">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <button class="lightbox-control lightbox-previous" type="button" aria-label="View previous image">
+        <i data-lucide="chevron-left" aria-hidden="true"></i>
+      </button>
+      <div class="lightbox-content">
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-details">
+          <p class="lightbox-caption" id="lightbox-caption"></p>
+          <p class="lightbox-count" aria-live="polite"></p>
+        </div>
+      </div>
+      <button class="lightbox-control lightbox-next" type="button" aria-label="View next image">
+        <i data-lucide="chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
   </body>
 </html>
