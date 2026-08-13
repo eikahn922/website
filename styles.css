@@ -931,13 +931,12 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   }
 
   .package-study {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 0.84fr) minmax(0, 0.58fr);
     grid-template-areas:
-      "description-heading"
-      "description"
-      "photos-heading"
-      "photos";
-    gap: 30px;
+      "description-heading photos-heading"
+      "description photos";
+    column-gap: clamp(12px, 3vw, 30px);
+    row-gap: 12px;
   }
 
   .package-copy {
@@ -954,7 +953,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   }
 
   .package-photos-heading {
-    margin-bottom: -18px;
+    margin-bottom: 0;
   }
 
   .case-media img:only-child {
@@ -967,12 +966,13 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 @media (max-width: 700px) {
-  .package-version {
-    grid-template-columns: 1fr;
+  .package-study {
+    column-gap: 10px;
   }
 
-  .package-version-title {
-    grid-column: auto;
+  .package-study .case-section p,
+  .package-study .bullet-list {
+    overflow-wrap: anywhere;
   }
 
   .hero-content {
