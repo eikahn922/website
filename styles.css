@@ -841,6 +841,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   gap: 14px;
 }
 
+.shin-gallery,
 .thigh-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
