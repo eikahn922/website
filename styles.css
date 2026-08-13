@@ -743,7 +743,12 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .package-evolution {
-  padding-top: 18px;
+  padding-top: 0;
+}
+
+.package-copy > .case-section:first-child {
+  padding-bottom: 8px;
+  border-bottom: 0;
 }
 
 .case-copy {
