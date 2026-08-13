@@ -1117,6 +1117,47 @@ body.lightbox-open {
   right: clamp(14px, 2vw, 26px);
 }
 
+.lightbox-control[hidden] {
+  display: none;
+}
+
+.nyscf-project-page .image-lightbox {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: clamp(68px, 7vw, 96px) clamp(12px, 3vw, 46px) 46px;
+}
+
+.nyscf-project-page .image-lightbox[hidden] {
+  display: none;
+}
+
+.nyscf-project-page .lightbox-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(94vw, 1500px);
+  height: auto;
+  margin: 0 auto;
+}
+
+.nyscf-project-page .lightbox-image {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.nyscf-project-page .lightbox-close {
+  position: fixed;
+}
+
+.nyscf-project-page .lightbox-previous,
+.nyscf-project-page .lightbox-next,
+.nyscf-project-page .lightbox-count {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .image-lightbox {
     grid-template-columns: 38px minmax(0, 1fr) 38px;
@@ -1136,6 +1177,16 @@ body.lightbox-open {
 
   .lightbox-caption {
     font-size: 0.82rem;
+  }
+
+  .nyscf-project-page .image-lightbox {
+    display: block;
+    padding: 62px 6px 24px;
+  }
+
+  .nyscf-project-page .lightbox-content {
+    width: 100%;
+    height: auto;
   }
 }
 
