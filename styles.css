@@ -812,6 +812,19 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   max-height: 205px;
 }
 
+.subsystem-gallery img {
+  max-height: 310px;
+}
+
+.subsystem-gallery-single .case-media-group,
+.thigh-gallery .thigh-overview {
+  grid-column: 1 / -1;
+}
+
+.thigh-gallery .thigh-overview img {
+  max-height: 270px;
+}
+
 .case-logo-image {
   padding: clamp(20px, 4vw, 50px);
   background: rgba(255, 255, 255, 0.45) !important;
