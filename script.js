@@ -86,3 +86,94 @@ if (sectionDots && workSection && projectGroups.length) {
   window.addEventListener("resize", scheduleUpdate);
   updateSectionDots();
 }
+
+const expandableGalleryImages = Array.from(document.querySelectorAll(".package-media img"));
+const imageLightbox = document.querySelector(".image-lightbox");
+const lightboxImage = imageLightbox?.querySelector(".lightbox-image");
+const lightboxCaption = imageLightbox?.querySelector(".lightbox-caption");
+const lightboxCount = imageLightbox?.querySelector(".lightbox-count");
+const lightboxClose = imageLightbox?.querySelector(".lightbox-close");
+const lightboxPrevious = imageLightbox?.querySelector(".lightbox-previous");
+const lightboxNext = imageLightbox?.querySelector(".lightbox-next");
+
+if (
+  expandableGalleryImages.length &&
+  imageLightbox &&
+  lightboxImage &&
+  lightboxCaption &&
+  lightboxCount &&
+  lightboxClose &&
+  lightboxPrevious &&
+  lightboxNext
+) {
+  let currentLightboxIndex = 0;
+  let lightboxReturnFocus = null;
+
+  const imageTitle = (image) => {
+    const sectionTitle = image.closest(".package-version")?.querySelector(".package-version-title")?.textContent?.trim();
+    const imageLabel = image.closest(".case-media-group")?.querySelector(".case-media-label")?.textContent?.trim();
+    return [sectionTitle, imageLabel].filter(Boolean).join(" · ");
+  };
+
+  const showLightboxImage = (index) => {
+    currentLightboxIndex = (index + expandableGalleryImages.length) % expandableGalleryImages.length;
+    const sourceImage = expandableGalleryImages[currentLightboxIndex];
+    lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+    lightboxImage.alt = sourceImage.alt;
+    lightboxCaption.textContent = imageTitle(sourceImage);
+    lightboxCount.textContent = `${currentLightboxIndex + 1} / ${expandableGalleryImages.length}`;
+  };
+
+  const openLightbox = (index) => {
+    lightboxReturnFocus = document.activeElement;
+    showLightboxImage(index);
+    imageLightbox.hidden = false;
+    document.body.classList.add("lightbox-open");
+    lightboxClose.focus();
+  };
+
+  const closeLightbox = () => {
+    imageLightbox.hidden = true;
+    lightboxImage.removeAttribute("src");
+    document.body.classList.remove("lightbox-open");
+    if (lightboxReturnFocus instanceof HTMLElement) {
+      lightboxReturnFocus.focus();
+    }
+  };
+
+  expandableGalleryImages.forEach((image, index) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Expand image: ${imageTitle(image)}`);
+    image.addEventListener("click", () => openLightbox(index));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(index);
+      }
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+  lightboxPrevious.addEventListener("click", () => showLightboxImage(currentLightboxIndex - 1));
+  lightboxNext.addEventListener("click", () => showLightboxImage(currentLightboxIndex + 1));
+  imageLightbox.addEventListener("click", (event) => {
+    if (event.target === imageLightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (imageLightbox.hidden) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    } else if (event.key === "ArrowLeft") {
+      showLightboxImage(currentLightboxIndex - 1);
+    } else if (event.key === "ArrowRight") {
+      showLightboxImage(currentLightboxIndex + 1);
+    }
+  });
+}
