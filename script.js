@@ -95,6 +95,7 @@ const lightboxCount = imageLightbox?.querySelector(".lightbox-count");
 const lightboxClose = imageLightbox?.querySelector(".lightbox-close");
 const lightboxPrevious = imageLightbox?.querySelector(".lightbox-previous");
 const lightboxNext = imageLightbox?.querySelector(".lightbox-next");
+const galleryOpenButton = document.querySelector(".gallery-open-button");
 
 if (
   expandableGalleryImages.length &&
@@ -154,6 +155,7 @@ if (
     });
   });
 
+  galleryOpenButton?.addEventListener("click", () => openLightbox(0));
   lightboxClose.addEventListener("click", closeLightbox);
   lightboxPrevious.addEventListener("click", () => showLightboxImage(currentLightboxIndex - 1));
   lightboxNext.addEventListener("click", () => showLightboxImage(currentLightboxIndex + 1));

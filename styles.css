@@ -742,10 +742,48 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .package-photos-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
   justify-self: start;
 }
 
-.package-photos-heading span {
+.package-photos-title {
+  color: var(--teal);
+}
+
+.package-photos-title::after {
+  content: "/";
+  margin-left: 6px;
+  color: var(--muted);
+}
+
+.gallery-open-button {
+  padding: 0;
+  color: var(--red);
+  background: transparent;
+  border: 0;
+  font: inherit;
+  letter-spacing: 0.04em;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.gallery-open-button:hover,
+.gallery-open-button:focus-visible {
+  color: var(--ink);
+}
+
+.gallery-open-button:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+.package-photos-heading .gallery-open-instruction {
   color: var(--muted);
   font-size: 0.68rem;
   letter-spacing: 0.02em;
