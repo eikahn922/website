@@ -940,6 +940,11 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
     gap: 30px;
   }
 
+  .package-copy {
+    position: static;
+    top: auto;
+  }
+
   .case-media {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
