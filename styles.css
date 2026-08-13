@@ -337,8 +337,8 @@ h1 {
   grid-column: 1 / -1;
   width: min(760px, 100%);
   justify-self: center;
-  grid-template-rows: 66% 34%;
-  aspect-ratio: 1.38;
+  grid-template-rows: minmax(0, 1fr) auto;
+  aspect-ratio: auto;
 }
 
 .project-card {
@@ -490,7 +490,7 @@ h1 {
 }
 
 .project-card-featured .project-body {
-  padding: 14px 20px 20px;
+  padding: 12px 20px 9px;
 }
 
 .project-grid-featured .project-card-featured h3 {
@@ -504,7 +504,7 @@ h1 {
 }
 
 .project-card-featured .project-cta {
-  margin-top: 8px;
+  margin-top: 6px;
   padding-top: 0;
 }
 
@@ -532,7 +532,8 @@ h1 {
 }
 
 .project-topline .project-skill-chips {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
+  margin-left: auto;
 }
 
 .project-topline .project-skill-chips span {
@@ -1303,8 +1304,22 @@ body.lightbox-open {
 
   .project-grid-featured .project-card-featured {
     grid-column: auto;
-    grid-template-rows: 65% 35%;
+    grid-template-rows: minmax(0, 1fr) auto;
     aspect-ratio: 0.78;
+  }
+
+  .project-card-featured .project-topline {
+    flex-wrap: nowrap;
+  }
+
+  .project-card-featured .project-skill-chips {
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  .project-card-featured .project-topline .project-skill-chips span {
+    padding: 3px 5px;
+    font-size: 0.52rem;
   }
 
   .project-card,
