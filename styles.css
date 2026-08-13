@@ -817,11 +817,15 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .subsystem-gallery-single .case-media-group,
-.thigh-gallery .thigh-overview {
+.thigh-gallery .thigh-overview,
+.pelvis-gallery .pelvis-overview,
+.pelvis-gallery .pelvis-static-view {
   grid-column: 1 / -1;
 }
 
-.thigh-gallery .thigh-overview img {
+.thigh-gallery .thigh-overview img,
+.pelvis-gallery .pelvis-overview img,
+.pelvis-gallery .pelvis-static-view img {
   max-height: 270px;
 }
 
