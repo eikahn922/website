@@ -146,10 +146,28 @@ if (
     }
   };
 
+  const addExpandHint = (image) => {
+    const figure = image.closest("figure");
+    if (!figure || figure.querySelector(".expand-hint")) {
+      return;
+    }
+
+    const hint = document.createElement("span");
+    hint.className = "expand-hint";
+    hint.setAttribute("aria-hidden", "true");
+
+    const icon = document.createElement("i");
+    icon.setAttribute("data-lucide", "maximize-2");
+    hint.append(icon);
+
+    image.insertAdjacentElement("afterend", hint);
+  };
+
   expandableGalleryImages.forEach((image, index) => {
     image.tabIndex = 0;
     image.setAttribute("role", "button");
     image.setAttribute("aria-label", `Expand image: ${imageTitle(image)}`);
+    addExpandHint(image);
     image.addEventListener("click", () => openLightbox(index));
     image.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {

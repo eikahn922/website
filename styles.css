@@ -12,6 +12,12 @@
   --shadow: 0 18px 42px rgba(16, 21, 26, 0.14);
   --radius: 8px;
   --max: 1360px;
+  --gallery-section-gap: 18px;
+  --gallery-title-gap: 10px;
+  --gallery-label-gap: 6px;
+  --gallery-column-gap: 10px;
+  --gallery-label-size: 0.7rem;
+  --gallery-label-reserve: 2.4em;
 }
 
 * {
@@ -835,6 +841,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .package-media {
   grid-template-columns: 1fr;
+  gap: var(--gallery-section-gap);
 }
 
 .case-media img {
@@ -845,12 +852,13 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .case-media figure {
+  position: relative;
   margin: 0;
 }
 
 .case-media-group {
   display: grid;
-  gap: 6px;
+  gap: var(--gallery-label-gap);
 }
 
 .case-media-label {
@@ -862,16 +870,35 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   text-transform: uppercase;
 }
 
+/* One label rhythm for every gallery section, so each title sits the same
+   distance above its images whether the label wraps to one line or two. The
+   reserved row keeps tiles in a row aligned, so it is scoped to the multi-tile
+   .package-version sections and left off single-image galleries. */
+.package-version .case-media-group {
+  grid-template-rows: minmax(var(--gallery-label-reserve), auto) auto;
+  align-content: start;
+}
+
+.package-version .case-media-label {
+  display: flex;
+  align-items: flex-end;
+  font-size: var(--gallery-label-size);
+  line-height: 1.25;
+}
+
 .package-version {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: 10px;
+  row-gap: var(--gallery-title-gap);
+  column-gap: var(--gallery-column-gap);
   width: 100%;
 }
 
+/* Section separation comes from the .package-media grid gap alone, so every
+   title clears the section above it by exactly --gallery-section-gap. */
 .package-version + .package-version {
-  padding-top: 6px;
+  padding-top: 0;
   border-top: 0;
 }
 
@@ -963,6 +990,44 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   outline-offset: 3px;
 }
 
+/* Corner affordance marking every gallery image as click-to-expand. Injected
+   by script.js next to each image the lightbox is wired to. Kept
+   pointer-events: none so the click still lands on the image itself. */
+.expand-hint {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(16, 21, 26, 0.55);
+  color: #fff;
+  opacity: 0.72;
+  transition: opacity 120ms ease, background-color 120ms ease;
+  pointer-events: none;
+}
+
+.expand-hint svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.25;
+}
+
+figure:hover > .expand-hint,
+img:focus-visible + .expand-hint {
+  background: rgba(16, 21, 26, 0.78);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expand-hint {
+    transition: none;
+  }
+}
+
 .subsystem-gallery img {
   width: 100%;
   height: 100%;
@@ -972,7 +1037,8 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .subsystem-gallery {
-  gap: 10px;
+  row-gap: var(--gallery-title-gap);
+  column-gap: var(--gallery-column-gap);
 }
 
 .shin-gallery,
@@ -986,16 +1052,7 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .subsystem-gallery .case-media-group {
   grid-column: auto;
-  grid-template-rows: minmax(2.4em, auto) auto;
-  align-content: start;
   min-width: 0;
-}
-
-.subsystem-gallery .case-media-label {
-  display: flex;
-  align-items: flex-end;
-  font-size: 0.7rem;
-  line-height: 1.25;
 }
 
 .subsystem-gallery figure {
@@ -1150,6 +1207,26 @@ body.lightbox-open {
 
 .nyscf-project-page .lightbox-close {
   position: fixed;
+}
+
+.lightbox-scroll-hint {
+  display: none;
+}
+
+.nyscf-project-page .lightbox-scroll-hint {
+  position: fixed;
+  top: clamp(26px, 3vw, 38px);
+  left: 50%;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.68rem, 1vw, 0.8rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .nyscf-project-page .lightbox-previous,
@@ -1399,6 +1476,20 @@ body.lightbox-open {
 
   .package-page-topline {
     column-gap: 10px;
+  }
+
+  /* Gallery tiles get small here, so the corner badge scales down with them. */
+  .expand-hint {
+    right: 5px;
+    bottom: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  .expand-hint svg {
+    width: 11px;
+    height: 11px;
   }
 
   .package-study .case-section p,
