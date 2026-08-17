@@ -990,11 +990,15 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 .dogwood-site-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 9px;
   justify-self: start;
   color: var(--red);
-  font-size: 0.78rem;
+  font-size: clamp(0.98rem, 1.45vw, 1.12rem);
   font-weight: 900;
+  line-height: 1.25;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
   text-transform: uppercase;
 }
 
@@ -1004,8 +1008,8 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 }
 
 .dogwood-site-link svg {
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
 }
 
 .dogwood-media figure {
