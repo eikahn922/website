@@ -983,6 +983,43 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
   border-bottom: 0;
 }
 
+.dogwood-copy .case-section {
+  border-bottom: 0;
+}
+
+.dogwood-site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  justify-self: start;
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.dogwood-site-link:hover,
+.dogwood-site-link:focus-visible {
+  color: var(--ink);
+}
+
+.dogwood-site-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.dogwood-media figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.dogwood-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .confidentiality-note {
   margin-top: 10px !important;
   font-size: 0.82rem !important;
