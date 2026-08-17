@@ -1115,6 +1115,26 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.motor-stability-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.motor-stability-full-gallery figure {
+  aspect-ratio: 4 / 5;
+}
+
+.motor-stability-close-gallery figure {
+  aspect-ratio: 1;
+}
+
+.subsystem-gallery-single.motor-stability-test-gallery .case-media-group {
+  width: min(300px, 72%);
+}
+
+.motor-stability-test-gallery figure {
+  aspect-ratio: 3 / 4;
+}
+
 .subsystem-gallery.thighbar-project-gallery figure {
   aspect-ratio: 3 / 4;
 }
