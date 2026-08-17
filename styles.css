@@ -361,6 +361,19 @@ h1 {
   transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease, opacity 320ms ease, filter 320ms ease;
 }
 
+.work-category-experience .project-card {
+  grid-template-rows: clamp(190px, 32vw, 260px) auto;
+  aspect-ratio: auto;
+}
+
+.work-category-experience .project-body {
+  padding-bottom: 14px;
+}
+
+.work-category-experience .project-cta {
+  margin-top: 12px;
+}
+
 .project-grid-featured .project-card:not(.project-card-featured) {
   grid-template-rows: 50% 50%;
   aspect-ratio: 1.35;
