@@ -1014,14 +1014,22 @@ body.project-focus-enabled .project-card[data-scroll-project]:not(.is-scroll-act
 
 .dogwood-media figure {
   margin: 0;
-  overflow: hidden;
-  border-radius: 8px;
+}
+
+.dogwood-media figcaption {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .dogwood-media img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 .confidentiality-note {
