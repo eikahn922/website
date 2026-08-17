@@ -366,6 +366,14 @@ h1 {
   aspect-ratio: 1.35;
 }
 
+.project-grid-featured .project-card[data-scroll-project="research-secondary"] {
+  aspect-ratio: 0.95;
+}
+
+.project-grid-featured .project-card-thighbar:not(.project-card-featured) {
+  grid-template-rows: 51% 49%;
+}
+
 .activity-grid {
   grid-template-columns: minmax(0, 760px);
 }
@@ -556,6 +564,21 @@ h1 {
 
 .project-grid-featured .project-card:not(.project-card-featured) .project-body {
   padding: 17px 18px 18px;
+}
+
+.project-grid-featured .project-card-thighbar:not(.project-card-featured) .project-body {
+  padding: 9px 14px 10px;
+}
+
+.project-grid-featured .project-card-thighbar:not(.project-card-featured) h3 {
+  margin: 4px 0 3px;
+  font-size: clamp(0.94rem, 1.25vw, 1.04rem);
+  line-height: 1.1;
+}
+
+.project-grid-featured .project-card-thighbar:not(.project-card-featured) p {
+  font-size: 0.74rem;
+  line-height: 1.22;
 }
 
 .project-topline {
@@ -1050,6 +1073,14 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.thighbar-project-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.subsystem-gallery.thighbar-project-gallery figure {
+  aspect-ratio: 3 / 4;
+}
+
 .subsystem-gallery .case-media-group {
   grid-column: auto;
   min-width: 0;
@@ -1470,6 +1501,14 @@ body.lightbox-open {
 }
 
 @media (max-width: 700px) {
+  .project-grid-featured .project-card[data-scroll-project="research-secondary"] {
+    aspect-ratio: 0.82;
+  }
+
+  .project-grid-featured .project-card-thighbar:not(.project-card-featured) {
+    grid-template-rows: 50% 50%;
+  }
+
   .package-study {
     column-gap: 10px;
   }
