@@ -499,6 +499,55 @@ h1 {
   grid-column: 4 / 6;
 }
 
+.project-card-robot-arm {
+  grid-template-rows: 66% 34%;
+  aspect-ratio: 1.45;
+}
+
+.project-split-cover {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px;
+  min-height: 0;
+  overflow: hidden;
+  background: #d7dde3;
+}
+
+.project-split-cover img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-split-cover img:first-child {
+  background: #303030;
+}
+
+.project-split-cover img:last-child {
+  background: #eef1f4;
+}
+
+.project-card-robot-arm .project-body {
+  padding: 13px 18px 11px;
+}
+
+.project-card-robot-arm h3 {
+  margin: 5px 0 3px;
+  font-size: clamp(1.1rem, 1.7vw, 1.3rem);
+}
+
+.project-card-robot-arm p {
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.project-card-robot-arm .project-cta {
+  margin-top: 5px;
+}
+
 .project-card img.project-logo {
   padding: 28px;
   object-fit: contain;
@@ -1144,6 +1193,18 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.robotic-arm-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.subsystem-gallery.robotic-arm-gallery figure {
+  aspect-ratio: 1;
+}
+
+.robotic-arm-gallery .case-media-group:first-of-type figure {
+  background: #303030;
+}
+
 .motor-stability-full-gallery figure {
   aspect-ratio: 4 / 5;
 }
@@ -1684,6 +1745,11 @@ body.lightbox-open {
   .project-card,
   .project-grid-featured .project-card:not(.project-card-featured) {
     grid-template-rows: 50% 50%;
+    aspect-ratio: 0.92;
+  }
+
+  .project-card-robot-arm {
+    grid-template-rows: 58% 42%;
     aspect-ratio: 0.92;
   }
 

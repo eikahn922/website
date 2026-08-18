@@ -9,7 +9,7 @@
     <link rel="icon" href="assets/generated/ezra-kahn-favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="assets/generated/ezra-kahn-favicon.png">
     <link rel="preload" href="assets/generated/ezra-kahn-portrait.png" as="image">
-    <link rel="stylesheet" href="styles.css?v=13">
+    <link rel="stylesheet" href="styles.css?v=14">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="script.js?v=7" defer></script>
   </head>
@@ -143,17 +143,25 @@
             <h3>Personal Robotics</h3>
           </div>
           <div class="project-grid">
-            <article class="project-card" id="project-meal-assist" data-scroll-project="meal-assist">
-              <img src="assets/generated/robot-arm.png" width="900" height="600" alt="Adaptive meal-assist robotic arm concept">
+            <a class="project-card project-card-link project-card-robot-arm" id="project-meal-assist" data-scroll-project="meal-assist" href="projects/robotic-arm.html" aria-label="Open 3-DOF Robotic Arm project page">
+              <div class="project-split-cover" aria-label="Robot arm shown as a ROS 2 kinematic model and SolidWorks assembly">
+                <img src="assets/projects/robotic-arm/ros-kinematic-model.png" width="542" height="666" alt="Three-joint robotic arm kinematic model with coordinate axes">
+                <img src="assets/projects/robotic-arm/solidworks-assembly.png" width="1140" height="1206" alt="SolidWorks side view of the complete three-joint robotic arm and gripper">
+              </div>
               <div class="project-body">
                 <div class="project-topline">
-                  <span>Personal project</span>
-                  <span>In progress</span>
+                  <span>June 2026-Present</span>
+                  <div class="project-skill-chips" aria-label="Robotic arm project skills">
+                    <span>SolidWorks</span>
+                    <span>ROS 2</span>
+                    <span>Torque Analysis</span>
+                  </div>
                 </div>
-                <h3>Adaptive Meal-Assist Robotic Arm</h3>
-                <p>Assistive feeding-arm concept developed through CAD, degree-of-freedom planning, and torque analysis.</p>
+                <h3>3-DOF Robotic Arm</h3>
+                <p>Mechanical design, ROS 2 modeling, and torque-driven actuator selection for a lightweight pick-and-place arm.</p>
+                <span class="project-cta">View project <i data-lucide="arrow-right" aria-hidden="true"></i></span>
               </div>
-            </article>
+            </a>
           </div>
         </div>
 
@@ -302,7 +310,7 @@
       <a class="section-dot" href="#project-thigh-bar" data-project="research-secondary" aria-label="Thigh Bar and Tester"></a>
       <a class="section-dot" href="#project-dogwood" data-project="dogwood" aria-label="Dogwood Brands"></a>
       <a class="section-dot" href="#project-nyscf" data-project="nyscf" aria-label="New York Stem Cell Foundation"></a>
-      <a class="section-dot" href="#project-meal-assist" data-project="meal-assist" aria-label="Adaptive Meal-Assist Robotic Arm"></a>
+      <a class="section-dot" href="#project-meal-assist" data-project="meal-assist" aria-label="3-DOF Robotic Arm"></a>
       <a class="section-dot" href="#project-academic-activities" data-project="academic-activities" aria-label="CMU Racing and Avenues Robotics"></a>
       <a class="section-dot" href="#project-building" data-project="building" aria-label="Building for Fun"></a>
       <a class="section-dot" href="#project-myface" data-project="myface" aria-label="myFace volunteering"></a>
