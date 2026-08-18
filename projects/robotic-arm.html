@@ -8,7 +8,7 @@
     <title>3-DOF Robotic Arm | Ezra Kahn</title>
     <link rel="icon" href="../assets/generated/ezra-kahn-favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/generated/ezra-kahn-favicon.png">
-    <link rel="stylesheet" href="../styles.css?v=14">
+    <link rel="stylesheet" href="../styles.css?v=15">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="../script.js?v=7" defer></script>
   </head>
@@ -51,7 +51,7 @@
 
             <section class="case-section" aria-labelledby="robotic-arm-ros-title">
               <h2 class="case-section-title" id="robotic-arm-ros-title">ROS 2 Robot Model</h2>
-              <p>I built a ROS 2 Jazzy development environment and a reusable robot-description package. The five-link URDF/Xacro chain defines three revolute joints, joint origins, axes, limits, and transforms. I integrated the SolidWorks base, waist, upper-arm, and forearm meshes, including a CAD-derived 120 mm shoulder-to-elbow spacing, and verified the model through RViz and the TF tree. I also wrote the Python launch configuration that starts the state publishers and RViz as one system.</p>
+              <p>I built a ROS 2 Jazzy development environment and a reusable robot-description package. The five-link URDF/Xacro chain defines three revolute joints, joint origins, axes, limits, and transforms. I integrated the SolidWorks base, waist, upper-arm, and forearm meshes, including a CAD-derived 120 mm shoulder-to-elbow spacing, and verified the model through RViz and the TF tree. I also wrote the Python launch configuration that starts the state publishers and RViz as one system. The recording shows the base, shoulder, and elbow joints responding to the joint-state controls.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-hardware-title">
@@ -105,6 +105,19 @@
               <h3 class="case-media-label">SolidWorks Assembly</h3>
               <figure>
                 <img src="../assets/projects/robotic-arm/solidworks-assembly.png" width="1140" height="1206" alt="Complete SolidWorks assembly of the three-joint robotic arm and gripper">
+              </figure>
+            </div>
+          </section>
+
+          <section class="package-version robotic-arm-video-section" aria-labelledby="robotic-arm-video-title">
+            <h2 class="package-version-title" id="robotic-arm-video-title">ROS 2 Motion Demonstration</h2>
+            <div class="case-media-group">
+              <h3 class="case-media-label">Joint-State Control in RViz</h3>
+              <figure>
+                <video controls playsinline preload="metadata" poster="../assets/projects/robotic-arm/ros-joint-state-demo-poster.png" aria-label="ROS 2 RViz demonstration of the robotic arm responding to base, shoulder, and elbow joint controls">
+                  <source src="../assets/projects/robotic-arm/ros-joint-state-demo.mp4" type="video/mp4">
+                  <a href="../assets/projects/robotic-arm/ros-joint-state-demo.mp4">Download the ROS 2 motion demonstration</a>
+                </video>
               </figure>
             </div>
           </section>

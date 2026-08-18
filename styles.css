@@ -1205,6 +1205,23 @@ img:focus-visible + .expand-hint {
   background: #303030;
 }
 
+.robotic-arm-video-section .case-media-group {
+  grid-column: 1 / -1;
+}
+
+.robotic-arm-video-section figure {
+  aspect-ratio: 1000 / 630;
+  background: #202428;
+}
+
+.robotic-arm-video-section video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #202428;
+}
+
 .motor-stability-full-gallery figure {
   aspect-ratio: 4 / 5;
 }
