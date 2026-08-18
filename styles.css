@@ -379,15 +379,6 @@ h1 {
   aspect-ratio: 1.35;
 }
 
-.project-grid-featured .project-card[data-scroll-project="research-secondary"] {
-  grid-template-rows: 54% 46%;
-  aspect-ratio: 1.22;
-}
-
-.project-grid-featured .project-card-thighbar:not(.project-card-featured) {
-  grid-template-rows: 54% 46%;
-}
-
 .activity-grid {
   grid-template-columns: minmax(0, 760px);
 }
@@ -499,9 +490,11 @@ h1 {
   grid-column: 4 / 6;
 }
 
+/* Match the cover height of the other full-width cards (research, internships,
+   builds) instead of running ~85px taller. */
 .project-card-robot-arm {
-  grid-template-rows: 66% 34%;
-  aspect-ratio: 1.45;
+  grid-template-rows: 260px auto;
+  aspect-ratio: auto;
 }
 
 .project-split-cover {
@@ -629,21 +622,6 @@ h1 {
   padding: 12px 16px 13px;
 }
 
-.project-grid-featured .project-card-thighbar:not(.project-card-featured) .project-body {
-  padding: 9px 14px 10px;
-}
-
-.project-grid-featured .project-card-thighbar:not(.project-card-featured) h3 {
-  margin: 4px 0 3px;
-  font-size: clamp(0.94rem, 1.25vw, 1.04rem);
-  line-height: 1.1;
-}
-
-.project-grid-featured .project-card-thighbar:not(.project-card-featured) p {
-  font-size: 0.74rem;
-  line-height: 1.22;
-}
-
 .project-topline {
   display: flex;
   align-items: center;
@@ -678,6 +656,21 @@ h1 {
   font-family: inherit;
   font-size: 0.88rem;
   line-height: 1.4;
+}
+
+/* A fixed aspect ratio used to hard-cap the body height, so a longer title or
+   blurb got clipped. Instead pin the cover to a fixed height and let the body
+   size to its content: grid stretch keeps the pair equal height, and the body's
+   own grid drops "View project" onto the same baseline in both cards. */
+.project-grid-featured .project-card[data-scroll-project="research-secondary"] {
+  aspect-ratio: auto;
+  grid-template-rows: 162px auto;
+}
+
+.project-grid-featured .project-card:not(.project-card-featured) .project-body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  row-gap: 0;
 }
 
 .project-cta {
@@ -1789,8 +1782,8 @@ body.lightbox-open {
   }
 
   .project-grid-featured .project-card[data-scroll-project="research-secondary"] {
-    grid-template-rows: 54% 46%;
-    aspect-ratio: 1.15;
+    grid-template-rows: 150px auto;
+    aspect-ratio: auto;
   }
 
   .section-dots {

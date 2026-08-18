@@ -8,7 +8,7 @@
     <title>3-DOF Robotic Arm | Ezra Kahn</title>
     <link rel="icon" href="../assets/generated/ezra-kahn-favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/generated/ezra-kahn-favicon.png">
-    <link rel="stylesheet" href="../styles.css?v=15">
+    <link rel="stylesheet" href="../styles.css?v=16">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="../script.js?v=7" defer></script>
   </head>
@@ -22,7 +22,7 @@
         <div class="package-column-heading package-photos-heading">
           <span class="package-photos-title">Photos</span>
           <button class="gallery-open-button" type="button">Open gallery</button>
-          <span class="gallery-open-instruction">or click either image to expand</span>
+          <span class="gallery-open-instruction">or click any image to expand</span>
         </div>
       </div>
 
@@ -33,30 +33,29 @@
             <section class="case-section">
               <div class="project-topline"><span>June 2026-Present</span><span>In development</span></div>
               <h1 class="case-section-title" id="robotic-arm-title">3-DOF Robotic Arm</h1>
-              <p>I am developing a compact robotic arm from the mechanical assembly through its ROS 2 representation and hardware plan. The system uses base yaw, shoulder pitch, and elbow pitch to position an actuated gripper for lightweight pick-and-place tasks.</p>
+              <p>A compact robotic arm developed from the mechanical assembly through to its ROS 2 model. Base yaw, shoulder pitch, and elbow pitch position an actuated gripper for lightweight pick-and-place.</p>
 
               <h2 class="case-subtitle">Design targets</h2>
               <ul class="bullet-list">
-                <li>Reach and transfer a lightweight object with three controlled arm joints and an actuated gripper.</li>
-                <li>Size each actuator from calculated joint loads instead of applying one servo selection everywhere.</li>
-                <li>Keep the CAD, robot model, electronics architecture, and test plan consistent as the project moves toward fabrication.</li>
+                <li>Reach and transfer a lightweight object with three controlled joints and an actuated gripper.</li>
+                <li>Size each actuator from calculated joint loads rather than reusing one servo everywhere.</li>
               </ul>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-cad-title">
               <h2 class="case-section-title" id="robotic-arm-cad-title">Mechanical Design</h2>
-              <p>I created the complete SolidWorks assembly and organized the base, waist, structural links, servo models, and geared gripper as separate subsystems. Mass properties from the PLA parts provide the moving masses and center-of-mass locations used in the engineering analysis.</p>
-              <p>I also used a conservative horizontal-load calculation with a 10 g payload and a 2.0 safety factor to size the shoulder and elbow servos. It produced design requirements of 7.65 kgf-cm at the shoulder and 3.88 kgf-cm at the elbow, making the shoulder the limiting joint.</p>
+              <p>The SolidWorks assembly organizes the base, waist, structural links, servo models, and geared gripper as separate subsystems. Mass properties from the PLA parts supply the moving masses and center-of-mass locations for the torque analysis.</p>
+              <p>A horizontal-load calculation with a 10 g payload and a 2.0 safety factor sized the shoulder and elbow servos: 7.65 kgf-cm and 3.88 kgf-cm respectively, making the shoulder the limiting joint.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-ros-title">
               <h2 class="case-section-title" id="robotic-arm-ros-title">ROS 2 Robot Model</h2>
-              <p>I built a ROS 2 Jazzy development environment and a reusable robot-description package. The five-link URDF/Xacro chain defines three revolute joints, joint origins, axes, limits, and transforms. I integrated the SolidWorks base, waist, upper-arm, and forearm meshes, including a CAD-derived 120 mm shoulder-to-elbow spacing, and verified the model through RViz and the TF tree. I also wrote the Python launch configuration that starts the state publishers and RViz as one system. The recording shows the base, shoulder, and elbow joints responding to the joint-state controls.</p>
+              <p>A five-link URDF/Xacro chain defines the three revolute joints with their origins, axes, limits, and transforms, built on the SolidWorks meshes and a CAD-derived 120 mm shoulder-to-elbow spacing. A Python launch file starts the state publishers and RViz together, and the model is verified through RViz and the TF tree. The recording below shows the base, shoulder, and elbow responding to joint-state controls.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-hardware-title">
               <h2 class="case-section-title" id="robotic-arm-hardware-title">Hardware and Validation Plan</h2>
-              <p>The physical architecture uses an ESP32, a PCA9685 PWM driver, and a separate high-current 6 V servo rail with common grounding and fused distribution. The CAD, torque analysis, parts plan, and initial ROS 2 model are complete. The next phase is fabrication, joint calibration, coordinated motion, and repeated pick-and-place testing.</p>
+              <p>The CAD, torque analysis, parts plan, and ROS 2 model are complete. The planned build uses an ESP32, a PCA9685 PWM driver, and a separate 6 V servo rail with common grounding and fused distribution. Fabrication and pick-and-place testing come next.</p>
             </section>
 
             <section class="case-section skills-section" aria-labelledby="robotic-arm-skills-title">
@@ -105,6 +104,18 @@
               <h3 class="case-media-label">SolidWorks Assembly</h3>
               <figure>
                 <img src="../assets/projects/robotic-arm/solidworks-assembly.png" width="1140" height="1206" alt="Complete SolidWorks assembly of the three-joint robotic arm and gripper">
+              </figure>
+            </div>
+            <div class="case-media-group">
+              <h3 class="case-media-label">Extended Reach Pose</h3>
+              <figure>
+                <img src="../assets/projects/robotic-arm/extended-pose-assembly.png" width="1278" height="1278" alt="SolidWorks view of the complete arm on its cylindrical base with the gripper extended out to the side">
+              </figure>
+            </div>
+            <div class="case-media-group">
+              <h3 class="case-media-label">Top-Down View</h3>
+              <figure>
+                <img src="../assets/projects/robotic-arm/top-down-view.png" width="658" height="990" alt="Top-down CAD view of the arm showing the base ring, upper arm, wrist servo, and gripper jaws">
               </figure>
             </div>
           </section>
