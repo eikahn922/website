@@ -46,21 +46,12 @@
             <section class="case-section" aria-labelledby="robotic-arm-cad-title">
               <h2 class="case-section-title" id="robotic-arm-cad-title">Mechanical Design</h2>
               <p>I created the complete SolidWorks assembly and organized the base, waist, structural links, servo models, and geared gripper as separate subsystems. Mass properties from the PLA parts provide the moving masses and center-of-mass locations used in the engineering analysis.</p>
-            </section>
-
-            <section class="case-section" aria-labelledby="robotic-arm-analysis-title">
-              <h2 class="case-section-title" id="robotic-arm-analysis-title">Torque-Driven Actuator Sizing</h2>
-              <p>I evaluated the arm in its conservative horizontal pose with a 10 g payload and a 2.0 safety factor. The elbow requires 3.88 kgf-cm of design torque for 217.60 g of moving mass. The shoulder requires 7.65 kgf-cm for 297.31 g and is the limiting joint.</p>
-              <ul class="bullet-list">
-                <li>Elbow: 35.3% of an 11 kgf-cm MG996R stall rating, with a preliminary 2.83x torque margin.</li>
-                <li>Shoulder: 69.5% utilization, with a preliminary 1.44x torque margin.</li>
-                <li>Final acceptance will use measured printed masses, current draw, temperature, backlash, and deflection.</li>
-              </ul>
+              <p>I also used a conservative horizontal-load calculation with a 10 g payload and a 2.0 safety factor to size the shoulder and elbow servos. It produced design requirements of 7.65 kgf-cm at the shoulder and 3.88 kgf-cm at the elbow, making the shoulder the limiting joint.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-ros-title">
               <h2 class="case-section-title" id="robotic-arm-ros-title">ROS 2 Robot Model</h2>
-              <p>I built a ROS 2 Jazzy development environment and a reusable robot-description package. The five-link URDF/Xacro chain defines three revolute joints, joint origins, axes, limits, and transforms. I integrated the SolidWorks base, waist, upper-arm, and forearm meshes, including a CAD-derived 120 mm shoulder-to-elbow spacing, and verified the model through RViz and the TF tree.</p>
+              <p>I built a ROS 2 Jazzy development environment and a reusable robot-description package. The five-link URDF/Xacro chain defines three revolute joints, joint origins, axes, limits, and transforms. I integrated the SolidWorks base, waist, upper-arm, and forearm meshes, including a CAD-derived 120 mm shoulder-to-elbow spacing, and verified the model through RViz and the TF tree. I also wrote the Python launch configuration that starts the state publishers and RViz as one system.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-hardware-title">
@@ -75,6 +66,7 @@
                 <div class="skill-chips" aria-label="Technical skills">
                   <span>SolidWorks</span>
                   <span>ROS 2</span>
+                  <span>Python</span>
                   <span>URDF/Xacro</span>
                   <span>Torque Analysis</span>
                 </div>
