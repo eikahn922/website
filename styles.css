@@ -310,17 +310,22 @@ h1 {
   margin: 0 auto;
 }
 
+/* Same model as the research-secondary pair: fixed cover row, body sized to
+   its content. The old percentage split squeezed the copy and pushed the CTA
+   past the clipped card edge. */
 .activity-image-grid .project-card {
-  grid-template-rows: 48% 52%;
-  aspect-ratio: 1.35;
+  grid-template-rows: 162px auto;
+  aspect-ratio: auto;
 }
 
 .activity-image-grid .project-body {
-  padding: 9px 15px 8px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  row-gap: 0;
+  padding: 12px 16px 13px;
 }
 
 .activity-image-grid h3 {
-  margin: 3px 0 2px;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
 }
 
@@ -328,11 +333,6 @@ h1 {
   font-family: inherit;
   font-size: 0.88rem;
   line-height: 1.4;
-}
-
-.activity-image-grid .project-cta {
-  margin-top: 5px;
-  font-size: 0.7rem;
 }
 
 .project-grid-featured .project-card-featured {
@@ -1797,8 +1797,20 @@ body.lightbox-open {
   }
 
   .activity-image-grid .project-card {
-    grid-template-rows: 50% 50%;
-    aspect-ratio: 0.92;
+    grid-template-rows: 150px auto;
+    aspect-ratio: auto;
+  }
+
+  /* Long blurb overflowed the fixed split here too, clipping the CTA. */
+  #project-myface {
+    grid-template-rows: 200px auto;
+    aspect-ratio: auto;
+  }
+
+  #project-myface .project-body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 0;
   }
 
   .activity-grid {
