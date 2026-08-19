@@ -1201,6 +1201,10 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.booth-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .subsystem-gallery.robotic-arm-gallery figure {
   aspect-ratio: 1;
 }
