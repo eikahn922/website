@@ -554,6 +554,21 @@ h1 {
   background: #eef1f4;
 }
 
+/* Tall booth photo in a wide cover slot: show the whole frame and let the
+   backdrop fill the sides rather than center-cropping to a strip. */
+.project-card img.booth-cover-image {
+  object-fit: contain;
+  object-position: center;
+  background: #eef1f4;
+}
+
+/* The photo is taller than it is wide, so the default 58% cover band would
+   shrink it to a narrow strip. Give the cover its own height instead. */
+#project-building {
+  grid-template-rows: clamp(240px, 30vw, 380px) auto;
+  aspect-ratio: auto;
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
