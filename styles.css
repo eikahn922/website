@@ -1205,6 +1205,24 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.gymnastics-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Portrait phone clips: let each video set its own height. The square tile the
+   photo galleries use would crop the bottom half, controls included. Needs to
+   outrank the later .subsystem-gallery figure rule, hence the doubled class. */
+.subsystem-gallery.gymnastics-gallery figure {
+  aspect-ratio: auto;
+  background: #10151a;
+}
+
+.subsystem-gallery.gymnastics-gallery video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .subsystem-gallery.robotic-arm-gallery figure {
   aspect-ratio: 1;
 }
