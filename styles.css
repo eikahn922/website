@@ -562,6 +562,13 @@ h1 {
   background: #eef1f4;
 }
 
+/* Portrait photo in a wide cover band: a centred crop would cut the head off,
+   so bias the visible strip upward to keep the rings and upper body in frame. */
+.project-card img.gymnastics-cover-image {
+  object-fit: cover;
+  object-position: center 15%;
+}
+
 /* The photo is taller than it is wide, so the default 58% cover band would
    shrink it to a narrow strip. Give the cover its own height instead. */
 #project-building {
