@@ -121,10 +121,16 @@ def draw_text(c, text, x, y, max_width, font="Helvetica", size=10.5, leading=14,
 
 def draw_bullets(c, items, x, y, max_width, size=9.5, leading=12.5, gap=5):
     for item in items:
+        lines = wrapped_lines(item, "Helvetica", size, max_width - 14)
         c.setFillColor(RED)
-        c.circle(x + 3, y + 3, 2.2, fill=1, stroke=0)
-        y = draw_text(c, item, x + 14, y + 7, max_width - 14, size=size, leading=leading, color=MUTED)
-        y -= gap
+        c.circle(x + 3, y + size * 0.32, 2.2, fill=1, stroke=0)
+        c.setFillColor(MUTED)
+        c.setFont("Helvetica", size)
+        line_y = y
+        for line in lines:
+            c.drawString(x + 14, line_y, line)
+            line_y -= leading
+        y -= len(lines) * leading + gap
     return y
 
 
@@ -381,12 +387,12 @@ def build():
     c.roundRect(446, 101, 308, 145, 10, fill=1, stroke=0)
     c.setFillColor(INK)
     c.setFont("Helvetica-Bold", 11)
-    c.drawString(462, 221, "What the role developed")
+    c.drawString(462, 201, "What the role developed")
     draw_bullets(c, [
         "Ownership of ambiguous, business-facing technical work.",
         "Team leadership and stakeholder alignment.",
         "Python, advanced Excel, web scraping, and data analytics.",
-    ], 462, 194, 276, size=8.8, leading=11.5, gap=4)
+    ], 462, 174, 276, size=8.8, leading=11.5, gap=4)
     draw_chips(c, ["Python", "Advanced Excel", "Data Analytics", "Team Leadership"], 38, 90, 370)
     draw_link(c, "View public scraper", "https://github.com/eikahn922/webscraper", 38, 55)
     draw_link(c, "Visit Dogwood Brands", "https://dogwoodbrands.com/", 161, 55)
@@ -413,8 +419,8 @@ def build():
     # 09 - Robot arm
     new_page(c, 9, "Personal Robotics")
     page_title(c, "June 2026-Present | In development", "3-DOF Robotic Arm", "Mechanical design, torque sizing, ROS 2 modeling, and Python launch tooling for a lightweight pick-and-place arm.")
-    draw_image_contain(c, asset("assets/projects/robotic-arm/ros-kinematic-model.png"), 434, 279, 150, 162)
-    draw_image_contain(c, asset("assets/projects/robotic-arm/solidworks-assembly.png"), 598, 279, 156, 162)
+    draw_image_contain(c, asset("assets/projects/robotic-arm/ros-kinematic-model.png"), 434, 279, 153, 162)
+    draw_image_contain(c, asset("assets/projects/robotic-arm/solidworks-assembly.png"), 601, 279, 153, 162)
     draw_image_contain(c, asset("assets/projects/robotic-arm/ros-joint-state-demo-poster.png"), 434, 104, 320, 142, background=HexColor("#202428"))
     y = section_label(c, "Mechanical design", 38, 435)
     y = draw_text(c, "The SolidWorks assembly separates the base, waist, structural links, servo models, and geared gripper. PLA mass properties and center-of-mass locations feed the joint-load calculations.", 38, y, 360, size=9.5, leading=13, color=INK)
@@ -462,8 +468,8 @@ def build():
     # 11 - Booth
     new_page(c, 11, "Building for Fun")
     page_title(c, "CMU Spring Carnival | 2025 and 2026", "Booth Manufacturing and Building Lead", "Led the construction of two public, multi-story wooden structures that placed 2nd and 3rd in the fraternity division.")
-    draw_image_cover(c, asset("assets/projects/booth/finished-facade.jpg"), 428, 278, 158, 160)
-    draw_image_cover(c, asset("assets/projects/booth/wall-framing-layout.jpg"), 600, 278, 154, 160)
+    draw_image_cover(c, asset("assets/projects/booth/finished-facade.jpg"), 428, 278, 156, 160)
+    draw_image_cover(c, asset("assets/projects/booth/wall-framing-layout.jpg"), 598, 278, 156, 160)
     draw_image_cover(c, asset("assets/projects/booth/second-story-framing.jpg"), 428, 104, 326, 142)
     y = section_label(c, "One-week public build", 38, 430)
     y = draw_text(c, "Everything moved onto Midway the Friday before Carnival and had to open the next Thursday. I ran the build through framing plans, cut lists, wall layout, assembly, second-story construction, and final facade work.", 38, y, 350, size=10, leading=13.5, color=INK)
