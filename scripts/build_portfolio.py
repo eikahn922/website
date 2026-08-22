@@ -394,7 +394,7 @@ def build():
     # 08 - NYSCF
     new_page(c, 8, "Engineering Internships")
     page_title(c, "New York Stem Cell Foundation | Jun-Aug 2023", "Digital Gas-Pressure Control", "A prototype architecture for replacing manual adjustment with continuous sensing and closed-loop control on the NYSCF Array.")
-    draw_image_contain(c, asset("assets/projects/nyscf/nyscf-poster-presentation.jpg"), 475, 95, 279, 345)
+    draw_image_contain(c, asset("assets/generated/nyscf-gas-pressure-poster.jpg"), 475, 95, 279, 345)
     y = section_label(c, "System architecture", 38, 433)
     y = draw_bullets(c, [
         "Integrated pressure, CO2, and O2 sensing through analog inputs and I2C communication.",
