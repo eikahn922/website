@@ -569,6 +569,13 @@ h1 {
   object-position: center 15%;
 }
 
+/* Same problem as the gymnastics cover: a tall photo in a wide band, so bias
+   the crop upward to keep the face and the cello in frame. */
+.project-card img.cello-cover-image {
+  object-fit: cover;
+  object-position: center 12%;
+}
+
 /* The photo is taller than it is wide, so the default 58% cover band would
    shrink it to a narrow strip. Give the cover its own height instead. */
 #project-building {
@@ -1218,6 +1225,42 @@ img:focus-visible + .expand-hint {
 
 .myface-gallery {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* The square tile absolutely positions its image, which would trap the caption
+   inside the clipped box. Let this one size to the photo so the caption flows
+   underneath it. */
+.subsystem-gallery.myface-gallery figure {
+  aspect-ratio: auto;
+}
+
+.subsystem-gallery.myface-gallery figure img {
+  position: static;
+  height: auto;
+}
+
+.cello-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Portrait clip: let the video set its own height rather than being cropped
+   by the square tile the photo galleries use. */
+.subsystem-gallery.cello-gallery figure {
+  aspect-ratio: auto;
+  background: #10151a;
+}
+
+.subsystem-gallery.cello-gallery video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Caption written as a sentence rather than the default all-caps label. */
+.case-media figcaption.media-note {
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 /* Portrait phone clips: let each video set its own height. The square tile the
