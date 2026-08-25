@@ -1544,7 +1544,8 @@ body.lightbox-open {
   margin-top: 12px;
 }
 
-.github-project-link {
+.github-project-link,
+.external-project-link {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -1557,7 +1558,8 @@ body.lightbox-open {
   font-weight: 800;
 }
 
-.github-project-link svg {
+.github-project-link svg,
+.external-project-link svg {
   width: 15px;
   height: 15px;
 }
