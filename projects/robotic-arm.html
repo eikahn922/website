@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ezra Kahn's 3-DOF robotic arm project, combining SolidWorks design, ROS 2 modeling, torque analysis, actuator selection, and a planned physical build.">
+    <meta name="description" content="Ezra Kahn's 3-DOF robotic arm project: SolidWorks design, a full-CAD ROS 2 URDF model, torque analysis, actuator selection, and a planned physical build.">
     <meta name="theme-color" content="#10151a">
     <title>3-DOF Robotic Arm | Ezra Kahn</title>
     <link rel="icon" href="../assets/generated/ezra-kahn-favicon.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/generated/ezra-kahn-favicon.png">
-    <link rel="stylesheet" href="../styles.css?v=16">
+    <link rel="stylesheet" href="../styles.css?v=17">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
     <script src="../script.js?v=7" defer></script>
   </head>
@@ -50,12 +50,14 @@
 
             <section class="case-section" aria-labelledby="robotic-arm-ros-title">
               <h2 class="case-section-title" id="robotic-arm-ros-title">ROS 2 Robot Model</h2>
-              <p>A five-link URDF/Xacro chain defines the three revolute joints with their origins, axes, limits, and transforms, built on the SolidWorks meshes and a CAD-derived 120 mm shoulder-to-elbow spacing. A Python launch file starts the state publishers and RViz together, and the model is verified through RViz and the TF tree. The recording below shows the base, shoulder, and elbow responding to joint-state controls.</p>
+              <p>A five-link URDF/Xacro chain defines the three revolute joints with their origins, axes, limits, and transforms, on a CAD-derived 120 mm shoulder-to-elbow spacing. The full SolidWorks assembly now drives the model: nine unique meshes covering the base, waist, upper arm, forearm, wrist, and gripper, with the gear, connecting-link, and finger parts each instantiated twice from the STEP assembly.</p>
+              <p>Every mesh was checked for scale, orientation, watertightness, and origin before integration, and SolidWorks-to-ROS axis differences are corrected with URDF origin rotations rather than by editing the CAD. A Python launch file starts robot_state_publisher, the joint-state GUI, and RViz as one system; the recording below shows the base, shoulder, and elbow responding to joint-state controls.</p>
             </section>
 
             <section class="case-section" aria-labelledby="robotic-arm-hardware-title">
               <h2 class="case-section-title" id="robotic-arm-hardware-title">Hardware and Validation Plan</h2>
-              <p>The CAD, torque analysis, parts plan, and ROS 2 model are complete. The planned build uses an ESP32, a PCA9685 PWM driver, and a separate 6 V servo rail with common grounding and fused distribution. Fabrication and pick-and-place testing come next.</p>
+              <p>The CAD, torque analysis, parts and power plan, and ROS 2 model are complete. The build runs MG996R servos at the shoulder and elbow and SG90s at the wrist and gripper, driven by an ESP32 and a PCA9685 PWM driver on a separate 6 V servo rail with common grounding and fused distribution.</p>
+              <p>Next is splitting the rigid wrist and gripper group into actuated joints, adding collision geometry and measured inertia per link, then a ros2_control configuration to command the servos in simulation before connecting hardware.</p>
             </section>
 
             <section class="case-section skills-section" aria-labelledby="robotic-arm-skills-title">
@@ -67,6 +69,7 @@
                   <span>ROS 2</span>
                   <span>Python</span>
                   <span>URDF/Xacro</span>
+                  <span>Kinematic Modeling</span>
                   <span>Torque Analysis</span>
                 </div>
               </div>
