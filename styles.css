@@ -1227,6 +1227,51 @@ img:focus-visible + .expand-hint {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.cmr-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* A caption inside the figure pushed the corner expand badge down on top of
+   it, since the badge anchors to the figure's bottom edge. Put the image and
+   the badge in one grid cell and the caption in the row beneath, so the badge
+   sits on the image where it belongs. */
+.subsystem-gallery.captioned-gallery figure {
+  display: grid;
+  grid-template-rows: auto auto;
+  aspect-ratio: auto;
+}
+
+.subsystem-gallery.captioned-gallery figure img {
+  position: static;
+  grid-area: 1 / 1;
+  height: auto;
+}
+
+.subsystem-gallery.captioned-gallery figure .expand-hint {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  grid-area: 1 / 1;
+  align-self: end;
+  justify-self: end;
+  margin: 0 8px 8px 0;
+}
+
+.subsystem-gallery.captioned-gallery figure figcaption {
+  grid-area: 2 / 1;
+}
+
+/* Square tile would trap the caption and crop the layout drawing, so let this
+   one size to the image. */
+.subsystem-gallery.cmr-gallery figure {
+  aspect-ratio: auto;
+}
+
+.subsystem-gallery.cmr-gallery figure img {
+  position: static;
+  height: auto;
+}
+
 /* The square tile absolutely positions its image, which would trap the caption
    inside the clipped box. Let this one size to the photo so the caption flows
    underneath it. */
