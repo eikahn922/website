@@ -419,6 +419,18 @@ h1 {
   transform-origin: center top;
 }
 
+/* The card carrying the jig cover is far taller than a text activity card, so
+   the shared 1.075 focus scale grew it ~42px past its own top edge and over
+   the section heading. Anchor it at its centre and ease the scale so the pop
+   stays inside the gap above it. */
+body.project-focus-enabled .activity-grid .activity-card.activity-card-media[data-scroll-project] {
+  transform-origin: center center;
+}
+
+body.project-focus-enabled .activity-grid .activity-card.activity-card-media[data-scroll-project].is-scroll-active {
+  transform: scale(1.03);
+}
+
 .academic-list {
   display: grid;
   gap: 9px;
